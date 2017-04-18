@@ -1,4 +1,5 @@
 <?php require_once('config.php'); 
+	  require_once('include/check_signup.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -8,7 +9,8 @@
 </head>
 <body>
 	<h3>Sign Up</h3>
-	<form action="<?php echo INCLUDE_DIR;?>login-process.php" method="post">
+	<?php require_once('include/signup_reminders.php') ?>
+	<form action="<?php echo HTTP_ROOT;?>signup-template.php" method="post">
 		<label for="name">Name</label>
 		<input id="name" type="text" name="name"><br />
 		<label for="username">Email</label>
