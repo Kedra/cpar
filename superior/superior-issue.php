@@ -1,6 +1,6 @@
-  <div class="mdl-tabs__panel is-active" id="issue-panel">
+  <div class="mdl-tabs__panel is-active" id="issue-panel" style="display: none;">
 <!--              <h1>List of Issues</h1>-->
-  <h2>Issue CPAR</h2>
+<!--  <h2>Issue CPAR</h2>-->
 
   <!-- Responsive table starts here -->
   <!-- For correct display on small screens you must add 'data-title' to each 'td' in your table -->
@@ -25,18 +25,18 @@
                                      </div>
                                      <div class="mdl-cell mdl-cell--1-col"></div>
                                      <div class="mdl-cell mdl-cell--5-col">
-                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 100%">
+                                          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 100%">
                                             <input class="mdl-textfield__input" pattern="[A-Z,a-z, ]*" type="text" id="Name">
-                                            <label class="mdl-textfield__label" for="Name">Issue To (Name)...</label>
+                                            <label class="mdl-textfield__label" for="Name">Issuer Dep’t./Crewing Office...</label>
                                             <span class="mdl-textfield__error">Letters and spaces only</span>
                                         </div>
                                      </div>
                                      
                                     <div class="mdl-cell mdl-cell--1-col"></div>
                                      <div class="mdl-cell mdl-cell--5-col">
-                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 100%">
+                                       <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 100%">
                                             <input class="mdl-textfield__input" pattern="[A-Z,a-z, ]*" type="text" id="Name">
-                                            <label class="mdl-textfield__label" for="Name">Issuer Dep’t./Crewing Office...</label>
+                                            <label class="mdl-textfield__label" for="Name">Issue To (Name)...</label>
                                             <span class="mdl-textfield__error">Letters and spaces only</span>
                                         </div>
                                      </div>
@@ -109,15 +109,15 @@
                                     </div>
                                      
 
-                                     <div class="mdl-cell mdl-cell--2-col"></div>
-                                     <div class="mdl-cell mdl-cell--8-col">
+                                     <div class="mdl-cell mdl-cell--9-col"></div>
+                                     <div class="mdl-cell mdl-cell--3-col">
                                         <p>
                                             <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" style="width: 100%" type="submit">
-                                                Login
+                                                Submit
                                             </button>
                                         </p>
                                     </div>
-                                    <div class="mdl-cell mdl-cell--2-col"></div>
+<!--                                    <div class="mdl-cell mdl-cell--2-col"></div>-->
                                      <br>
                                      <br>
                                      <br>

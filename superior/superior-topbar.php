@@ -61,7 +61,7 @@
             <i class="material-icons">more_vert</i>
           </button>
           <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right mdl-js-ripple-effect" for="more-button">
-            <li class="mdl-menu__item">Account Settings</li>
+              <a style="text-decoration: none" href="http://localhost/cpar/superior-manage-account.php"><li class="mdl-menu__item">Manage Accounts</li></a>
             <li class="mdl-menu__item">Logout</li>
 <!--            <li disabled class="mdl-menu__item">4.3 Jelly Bean</li>-->
           </ul>
@@ -73,19 +73,32 @@
           <img class="android-logo-image" src="assets/img/cpar-logo.png">
         </span>
         <nav class="mdl-navigation">
-          <a class="mdl-navigation__link" href="">Phones</a>
-          <a class="mdl-navigation__link" href="">Tablets</a>
-          <a class="mdl-navigation__link" href="">Wear</a>
-          <a class="mdl-navigation__link" href="">TV</a>
-          <a class="mdl-navigation__link" href="">Auto</a>
-          <a class="mdl-navigation__link" href="">One</a>
-          <a class="mdl-navigation__link" href="">Play</a>
+          <a class="mdl-navigation__link" href="#demo">
+              <i class="mdl-icon-toggle__label material-icons">assignment_turned_in</i>
+              Validate CPAR
+          </a>
+          <a class="mdl-navigation__link" href="#issue-panel">
+              <i class="mdl-icon-toggle__label material-icons">assignment_ind</i>
+              Issue CPAR
+          </a>
+          <a class="mdl-navigation__link" href="#targaryens-panel"> 
+              <i class="mdl-icon-toggle__label material-icons">notifications</i>
+              Notification
+          </a>
+          <a class="mdl-navigation__link" href="#history-panel">
+               <i class="mdl-icon-toggle__label material-icons">history</i>
+               History
+          </a>
           <div class="android-drawer-separator"></div>
-          <span class="mdl-navigation__link" href="">Versions</span>
-          <a class="mdl-navigation__link" href="">Lollipop 5.0</a>
-          <a class="mdl-navigation__link" href="">KitKat 4.4</a>
-          <a class="mdl-navigation__link" href="">Jelly Bean 4.3</a>
-          <a class="mdl-navigation__link" href="">Android history</a>
+          <a class="mdl-navigation__link" href="">
+               <i class="mdl-icon-toggle__label material-icons">account_circle</i>
+               Manage Accounts
+          </a>
+          <a class="mdl-navigation__link" href="">
+              <i class="mdl-icon-toggle__label material-icons">power_settings_new</i>
+               Logout
+          </a>
+<!--
           <div class="android-drawer-separator"></div>
           <span class="mdl-navigation__link" href="">Resources</span>
           <a class="mdl-navigation__link" href="">Official blog</a>
@@ -96,5 +109,6 @@
           <a class="mdl-navigation__link" href="">App developer resources</a>
           <a class="mdl-navigation__link" href="">Android Open Source Project</a>
           <a class="mdl-navigation__link" href="">Android SDK</a>
+-->
         </nav>
       </div>

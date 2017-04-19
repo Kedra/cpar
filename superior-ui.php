@@ -23,7 +23,22 @@
        <?php include_once('superior/superior-footer.php'); ?>
       </main>
     </div>
-   
+      
+    <script type="text/javascript">
+      $(document).ready(function(){
+            $(".mdl-tabs__tab-bar a").click(function () {
+                $('.mdl-tabs__panel').hide().eq($(this).index()).show();  // hide all divs and show the current div
+            });
+        });
+        
+        $(document).ready(function(){
+            $(".mdl-navigation a").click(function () {
+                $('.mdl-tabs__panel').hide().eq($(this).index()).show();  // hide all divs and show the current div
+                $( '.mdl-layout__drawer, .mdl-layout__obfuscator' ).removeClass( 'is-visible' );
+            });
+        });
+        
+    </script>
     
     <script src="assets/js/material.min.js"></script>
   </body>

@@ -24,6 +24,7 @@
     
     
     <script src="assets/js/getmdl-select.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
     
     <style>
         #view-source {

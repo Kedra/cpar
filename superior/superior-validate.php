@@ -1,6 +1,12 @@
-  <div class="mdl-tabs__panel is-active" id="demo" hidden>
+ <div class="mdl-tabs__panel is-active" id="demo">
 <!--              <h1>List of Issues</h1>-->
-              <h2>Issues As of - 04/14/2017</h2>
+              <h1>Issues As Of April 04, 2018</h1>
+
+       <div class="mdl-grid">
+<!--            <div class="mdl-cell mdl-cell--1-col"></div>-->
+            <div class="mdl-cell mdl-cell--12-col">      
+      <div class="mdl-grid portfolio-max-width portfolio-contact" style="width: 110%">
+                    <div class="mdl-card__supporting-text">
 
               <!-- Responsive table starts here -->
               <!-- For correct display on small screens you must add 'data-title' to each 'td' in your table -->
@@ -76,4 +82,8 @@
                   </tbody>
                 </table>
               </div>
+            </div>
+          </div>
+            </div>
+           </div>
             </div>
