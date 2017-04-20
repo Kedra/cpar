@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(!isset($_SESSION['username'])) {
-    header('location: login-template.php');
+    header('location: login.php');
     exit();
 }
 
@@ -11,7 +11,7 @@ if (isset($_GET['logout'])) {
     unset($_SESSION['password']);
     unset($_SESSION['id']);
     $_SESSION['success_logout'] = 'You have logged out.';
-    header('location: login-template.php');
+    header('location: login.php');
     exit();
 }
 
@@ -26,7 +26,7 @@ if($sql = mysqli_query($con, 'SELECT * FROM ACCNT WHERE ACCNT_ID = ' . $id . ' A
     $row_cnt = mysqli_num_rows($sql);
     if ($row_cnt == 0) {
         $_SESSION['user_notmatch'] = 'Your login session data is not on the record in the database';
-        header('location: login-template.php');
+        header('location: login.php');
         exit();
     }
     mysqli_free_result($sql);

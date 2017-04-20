@@ -21,10 +21,13 @@
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/table.css">
     <link rel="stylesheet" href="assets/css/getmdl-select.min.css">
+    <link rel="stylesheet" href="assets/css/material-modal.min.css">
     
     
     <script src="assets/js/getmdl-select.min.js"></script>
     <script src="assets/js/jquery.min.js"></script>
+     
+    <script src="assets/js/material.min.js"></script>
     
     <style>
         #view-source {
