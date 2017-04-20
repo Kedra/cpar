@@ -21,10 +21,20 @@
               <h1>Manage Accounts</h1>
 
        <div class="mdl-grid">
-<!--            <div class="mdl-cell mdl-cell--1-col"></div>-->
-            <div class="mdl-cell mdl-cell--12-col">      
-      <div class="mdl-grid portfolio-max-width portfolio-contact" style="width: 110%">
+            <div class="mdl-cell mdl-cell--1-col"></div>
+            <div class="mdl-cell mdl-cell--11-col">    
+               <div class="mdl-grid portfolio-max-width portfolio-contact" style="width: 100%">
+          
                     <div class="mdl-card__supporting-text">
+                        
+                         <a href="" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored modal__trigger" data-modal="#modal" style="width: 15%">
+                <i class="material-icons" style="float: left; margin-top: 4px">perm_identity</i>
+                <span>Add User</span>
+              </a>
+                        
+              <?php include_once('add-user-modal.php'); ?>
+                        <br>
+                        <br>
 
               <!-- Responsive table starts here -->
               <!-- For correct display on small screens you must add 'data-title' to each 'td' in your table -->
@@ -177,7 +187,7 @@
         });
         
     </script>
-    
+    <script src="assets/js/material-modal.js"></script>
     <script src="assets/js/material.min.js"></script>
   </body>
 </html>

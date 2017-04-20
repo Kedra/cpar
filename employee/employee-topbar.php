@@ -26,11 +26,10 @@
 -->
         
         <div class="android-navigation-container">
-             <div class="android-navigation mdl-navigation">
+             <div class="android-navigation mdl-navigation" style="width: 440px;">
               <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
                 <nav class="mdl-tabs__tab-bar">
-                    <a class="mdl-tabs__tab is-active mdl-typography--text-uppercase" href="#demo"><b>Validate CPAR</b></a>
-                    <a class="mdl-tabs__tab mdl-typography--text-uppercase" href="#issue-panel"><b>Issue CPAR</b></a>                
+                    <a class="mdl-tabs__tab is-active mdl-typography--text-uppercase" href="#demo"><b>Respond CPAR</b></a>    
                     <a class="mdl-tabs__tab mdl-typography--text-uppercase" href="#targaryens-panel"><span class="mdl-badge" data-badge="4"><b>Notification</b></span></a>
                     <a class="mdl-tabs__tab mdl-typography--text-uppercase" href="#history-panel"><b>History</b></a>
                 </nav>
@@ -74,12 +73,8 @@
         </span>
         <nav class="mdl-navigation">
           <a class="mdl-navigation__link" href="#demo">
-              <i class="mdl-icon-toggle__label material-icons">assignment_turned_in</i>
-              Validate CPAR
-          </a>
-          <a class="mdl-navigation__link" href="#issue-panel">
-              <i class="mdl-icon-toggle__label material-icons">assignment_ind</i>
-              Issue CPAR
+              <i class="mdl-icon-toggle__label material-icons">feedback</i>
+              Respond CPAR
           </a>
           <a class="mdl-navigation__link" href="#targaryens-panel"> 
               <i class="mdl-icon-toggle__label material-icons">notifications</i>
@@ -90,10 +85,12 @@
                History
           </a>
           <div class="android-drawer-separator"></div>
+<!--
           <a class="mdl-navigation__link" href="">
                <i class="mdl-icon-toggle__label material-icons">account_circle</i>
                Manage Accounts
           </a>
+-->
           <a class="mdl-navigation__link" href="">
               <i class="mdl-icon-toggle__label material-icons">power_settings_new</i>
                Logout

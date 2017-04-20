@@ -4,7 +4,7 @@
   <body>
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         
-      <?php include_once('superior/superior-topbar.php'); ?>
+      <?php include_once('issuer/issuer-topbar.php'); ?>
         
 
 <!--
@@ -16,12 +16,11 @@
            <a name="top"></a>
            <div class="page-content" style="background-color: #b3ccff">
           <br>
-          <?php include_once('superior/superior-validate.php'); ?>
-          <?php include_once('superior/superior-issue.php'); ?>
-          <?php include_once('superior/superior-notification.php'); ?>
-          <?php include_once('superior/superior-history.php'); ?>
+          <?php include_once('issuer/issuer-issue.php'); ?>
+          <?php include_once('issuer/issuer-notification.php'); ?>
+          <?php include_once('issuer/issuer-history.php'); ?>
         </div>
-       <?php include_once('superior/superior-footer.php'); ?>
+       <?php include_once('issuer/issuer-footer.php'); ?>
       </main>
     </div>
       

@@ -16,7 +16,7 @@
           </div>
 
           <div class="mdl-mega-footer--middle-section">
-           <p class="mdl-typography--font-light">PTC Philippine Copyright © 2017</p>
+            <p class="mdl-typography--font-light">PTC Philippine Copyright © 2017</p>
             <p class="mdl-typography--font-light">All Rights Reserved.</p>
           </div>
 

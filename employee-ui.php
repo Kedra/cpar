@@ -4,7 +4,7 @@
   <body>
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         
-      <?php include_once('superior/superior-topbar.php'); ?>
+      <?php include_once('employee/employee-topbar.php'); ?>
         
 
 <!--
@@ -13,15 +13,15 @@
         <div class="android-be-together-section mdl-typography--text-center" style="background-color: #b3ccff">
 -->
          <main class="android-content mdl-layout__content">
-           <a name="top"></a>
+             <a name="top"></a>
            <div class="page-content" style="background-color: #b3ccff">
+            
           <br>
-          <?php include_once('superior/superior-validate.php'); ?>
-          <?php include_once('superior/superior-issue.php'); ?>
-          <?php include_once('superior/superior-notification.php'); ?>
-          <?php include_once('superior/superior-history.php'); ?>
+          <?php include_once('employee/employee-validate.php'); ?>
+          <?php include_once('employee/employee-notification.php'); ?>
+          <?php include_once('employee/employee-history.php'); ?>
         </div>
-       <?php include_once('superior/superior-footer.php'); ?>
+       <?php include_once('employee/employee-footer.php'); ?>
       </main>
     </div>
       
