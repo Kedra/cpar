@@ -29,7 +29,7 @@
         background-size: cover;
         overflow-y: hidden ! important;
         overflow-x: hidden ! important;
-        background-color: #ff8080;
+        background-color: #b3ccff;
     }    
     
 </style>
