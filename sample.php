@@ -2,9 +2,16 @@
   <head>
     <meta charset="UTF-8">
     <title>Material Design Modal Demo</title>
+<<<<<<< HEAD
     <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.indigo-pink.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="assets/css/material-modal.min.css">
+=======
+<!--    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.indigo-pink.min.css">-->
+      <link rel="stylesheet" href="assets/css/material.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="assets/css/material-modal.css">
+>>>>>>> 50a2ca1acfe1a0a436eab0c1ec4a6ffe074e9c86
 <!--    <link rel="stylesheet" href="css/demo.min.css">-->
 
 
@@ -25,7 +32,11 @@
                 <h2 class="modal__title-text">Modal</h2>
               </div>
 
+<<<<<<< HEAD
               <span class="mdl-button mdl-button--icon mdl-js-button  material-icons  modal__close"></span>
+=======
+              <span class="mdl-button mdl-button--icon mdl-js-button material-icons modal__close"></span>
+>>>>>>> 50a2ca1acfe1a0a436eab0c1ec4a6ffe074e9c86
             </div>
 
 

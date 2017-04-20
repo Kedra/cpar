@@ -13,6 +13,7 @@
         <div class="android-be-together-section mdl-typography--text-center" style="background-color: #b3ccff">
 -->
          <main class="android-content mdl-layout__content">
+           <a name="top"></a>
            <div class="page-content" style="background-color: #b3ccff">
           <br>
           <?php include_once('superior/superior-validate.php'); ?>
