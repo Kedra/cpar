@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once('connect/connect.php');
-if(isset($_SESSION['id']) && isset($_SESSION['username']) && isset($_SESSION['password'])) {
+if(isset($_SESSION['acct_id']) && isset($_SESSION['acct_username']) && isset($_SESSION['acct_password'])) {
     header('location: index.php');
     exit();
 }
@@ -33,19 +33,43 @@ if(isset($_POST['username']) && isset($_POST['password'])) {
         $row_cnt = mysqli_num_rows($sql);
         if($row_cnt == 0) {
             $_SESSION['account_notfound'] = 'Invalid user credentials.';
+			mysqli_free_result($sql);
+			mysqli_close($con);
 			header('location: login.php');
 			exit();	
         }
         while ($row = mysqli_fetch_array($sql, MYSQLI_ASSOC)) {
             $id = $row['ACCNT_ID'];
         }
-        $_SESSION['id'] = $id;
-        $_SESSION['username'] = $username;
-        $_SESSION['password'] = $password;
-        mysqli_free_result($sql);
-        mysqli_close($con);
-        header('location: index.php');
-        exit();
+	
+        $_SESSION['acct_id'] = $id;
+        $_SESSION['acct_username'] = $username;
+        $_SESSION['acct_password'] = $password;
+		if($sql = mysqli_query($con, 'SELECT * FROM USR WHERE USR_ACCNT_ID = ' . $id . ' LIMIT 1')) {
+			$row_cnt = mysqli_num_rows($sql);
+			if($row_cnt == 0) {
+				$_SESSION['account_notfound'] = 'Invalid user credentials.';
+				mysqli_free_result($sql);
+				mysqli_close($con);
+				header('location: login.php');
+				exit();	
+			}
+			
+			while ($row = mysqli_fetch_array($sql, MYSQLI_ASSOC)) {
+				$usr_nm = $row['USR_NM'];
+				$usr_dpt = $row['USR_DPRTMNT'];
+				$usr_accnt_typ_id = $row['USR_ACCNT_TYP_ID'];
+			}
+			
+			$_SESSION['usr_nm'] = $usr_nm;
+			$_SESSION['usr_dprtmnt'] = $usr_dpt;
+			$_SESSION['usr_accnt_typ_id'] = $usr_accnt_typ_id;
+			mysqli_free_result($sql);
+			mysqli_close($con);
+			header('location: index.php');
+			exit();
+		}
+        
 
     } 
     

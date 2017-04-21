@@ -1,4 +1,4 @@
-  <div class="mdl-tabs__panel is-active" id="issue-panel">
+<div class="mdl-tabs__panel is-active" id="issue-panel">
 <!--              <h1>List of Issues</h1>-->
 <!--  <h2>Issue CPAR</h2>-->
 
@@ -12,13 +12,14 @@
             <div class="mdl-grid portfolio-max-width portfolio-contact">
                 <div class="mdl-cell mdl-cell--10-col mdl-card mdl-shadow--4dp">
                     <div class="mdl-card__supporting-text">
-                            <form action="#" class="">
+							
+                            <form action="issuer.php" class="" method="POST">
                                  <div class="mdl-grid">
                                      
                                     <div class="mdl-cell mdl-cell--1-col"></div>
                                      <div class="mdl-cell mdl-cell--5-col">
                                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 100%">
-                                            <input class="mdl-textfield__input" pattern="[A-Z,a-z, ]*" type="text" id="Name">
+                                            <input name="issuer_name" class="mdl-textfield__input" pattern="[A-Z,a-z, ]*" type="text" id="Name" value="<?php echo $_SESSION['usr_nm'];?>" disabled="true">
                                             <label class="mdl-textfield__label" for="Name">Issuer Name...</label>
                                             <span class="mdl-textfield__error">Letters and spaces only</span>
                                         </div>
@@ -26,7 +27,7 @@
                                      <div class="mdl-cell mdl-cell--1-col"></div>
                                      <div class="mdl-cell mdl-cell--5-col">
                                           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 100%">
-                                            <input class="mdl-textfield__input" pattern="[A-Z,a-z, ]*" type="text" id="Name">
+                                            <input name="issuer_dprtmnt" class="mdl-textfield__input" pattern="[A-Z,a-z, ]*" type="text" id="Name" value="<?php echo $_SESSION['usr_dprtmnt'];?>" disabled="true">
                                             <label class="mdl-textfield__label" for="Name">Issuer Dep’t./Crewing Office...</label>
                                             <span class="mdl-textfield__error">Letters and spaces only</span>
                                         </div>

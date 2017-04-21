@@ -21,53 +21,10 @@
               <h1>Manage Accounts</h1>
 
        <div class="mdl-grid">
-<<<<<<< HEAD
-<!--            <div class="mdl-cell mdl-cell--1-col"></div>-->
-            <div class="mdl-cell mdl-cell--12-col">  
-<!--
-                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" style="width: 15%">
-                  <i class="material-icons" style="float: left; margin-top: 4px">perm_identity</i>
-                    <span>Add User</span>
-                </button>
--->
-                 <a href="" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored modal__trigger" data-modal="#modal" style="width: 15%">
-                <i class="material-icons" style="float: left; margin-top: 4px">perm_identity</i>
-                <span>Add User</span>
-              </a>
-      <div id="modal" class="modal modal__bg">
-        <div class="modal__dialog">
-          <div class="modal__content">
-            <div class="modal__header">
-              <div class="modal__title">
-                <h2 class="modal__title-text">Modal</h2>
-              </div>
 
-              <span class="mdl-button mdl-button--icon mdl-js-button  material-icons  modal__close"></span>
-            </div>
-
-
-            <div class="modal__text">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis laboriosam accusantium facere suscipit, alias accusamus corrupti consequatur at porro, voluptates commodi sed omnis voluptatem, ex officiis illum, architecto fugiat id?
-              </p>
-            </div>
-
-            <div class="modal__footer">
-              <a class="mdl-button mdl-button--colored mdl-js-button  modal__close">
-                Close
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-                
-      <div class="mdl-grid portfolio-max-width portfolio-contact" style="width: 110%">
-=======
             <div class="mdl-cell mdl-cell--1-col"></div>
             <div class="mdl-cell mdl-cell--11-col">    
                <div class="mdl-grid portfolio-max-width portfolio-contact" style="width: 100%">
-          
->>>>>>> 50a2ca1acfe1a0a436eab0c1ec4a6ffe074e9c86
                     <div class="mdl-card__supporting-text">
                         
                          <a href="" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored modal__trigger" data-modal="#modal" style="width: 15%">

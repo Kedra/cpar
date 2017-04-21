@@ -22,12 +22,9 @@
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/table.css">
     <link rel="stylesheet" href="assets/css/getmdl-select.min.css">
-<<<<<<< HEAD
     <link rel="stylesheet" href="assets/css/material-modal.min.css">
-=======
 <!--    <link rel="stylesheet" href="assets/css/material-modal.min.css">-->
     <link rel="stylesheet" href="assets/css/material-modal.css">
->>>>>>> 50a2ca1acfe1a0a436eab0c1ec4a6ffe074e9c86
     
     
     <script src="assets/js/getmdl-select.min.js"></script>

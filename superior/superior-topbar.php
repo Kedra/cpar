@@ -94,7 +94,7 @@
                <i class="mdl-icon-toggle__label material-icons">account_circle</i>
                Manage Accounts
           </a>
-          <a class="mdl-navigation__link" href="">
+          <a class="mdl-navigation__link" href="superior.php?logout">
               <i class="mdl-icon-toggle__label material-icons">power_settings_new</i>
                Logout
           </a>
