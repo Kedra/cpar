@@ -1,6 +1,9 @@
 <!doctype html>
 <html lang="en">
-  <?php include_once('header.php'); ?>
+  <?php include_once('header.php'); 
+		require_once('config.php');
+		require_once('include/check_session.php');
+	?>
   <body>
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         

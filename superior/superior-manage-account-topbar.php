@@ -26,7 +26,7 @@
           <span class="android-mobile-title mdl-layout-title">
             <img class="android-logo-image" src="assets/img/android-logo.png">
           </span>
-          <a href="http://localhost/cpar/superior.php">
+          <a href="<?php echo HTTP_ROOT;?>superior.php">
           <button class="android-more-button mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="more-button">
               <i class="material-icons">home</i>
           </button>

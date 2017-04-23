@@ -5,14 +5,6 @@
           </span>
           <!-- Add spacer, to align navigation to the right in desktop -->
           <div class="android-header-spacer mdl-layout-spacer"></div>
-          <div class="android-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
-            <label class="mdl-button mdl-js-button mdl-button--icon" for="search-field">
-              <i class="material-icons">search</i>
-            </label>
-            <div class="mdl-textfield__expandable-holder">
-              <input class="mdl-textfield__input" type="text" id="search-field">
-            </div>
-          </div>
           <!-- Navigation -->
 <!--
           <div class="android-navigation-container">
@@ -60,8 +52,7 @@
             <i class="material-icons">more_vert</i>
           </button>
           <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right mdl-js-ripple-effect" for="more-button">
-			  <a style="text-decoration: none; color: black;" href="issuer.php?logout"><li class="mdl-menu__item">Logout</li><a>
-			  
+			  <a style="text-decoration: none; color: black;" href="<?php echo HTTP_ROOT;?>issuer.php?logout"><li class="mdl-menu__item">Logout</li><a>
 <!--            <li disabled class="mdl-menu__item">4.3 Jelly Bean</li>-->
           </ul>
         </div>
@@ -91,7 +82,7 @@
                Manage Accounts
           </a>
 -->
-          <a class="mdl-navigation__link" href="issuer.php?logout">
+          <a class="mdl-navigation__link" href="<?php echo HTTP_ROOT;?>issuer.php?logout">
               <i class="mdl-icon-toggle__label material-icons">power_settings_new</i>
                Logout
           </a>
