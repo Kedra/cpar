@@ -18,7 +18,7 @@ if($sql = mysqli_query($con, $sql_stmt)) {
 			$apprvl_sts = $row['ISS_APPRVL_STS'];
 		}
 		if ($row['ISS_VLDT_STS'] == 'VALIDATED' && $row['ISS_APPRVL_STS'] && 'Approved' && empty($row['ISS_RT_CSE']) && empty($row['ISS_CRRCTN']) && empty($row['ISS_CRRCTN_ACTN'])) {
-			$sts = '<a style="text-decoration: none" href="employee-respond-cpar.php?issue_id_to_answer='.$row['ISS_ID'].'">Respond</a>';
+			$sts = '<a style="text-decoration: none" href="'. HTTP_ROOT .'employee-respond-cpar.php?issue_id_to_answer='.$row['ISS_ID'].'">Respond</a>';
 			$apprvl_sts = '';
 		} else if ($row['ISS_APPRVL_STS'] == 'Denied') {
 			$sts = 'Closed';
