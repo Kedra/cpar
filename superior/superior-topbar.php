@@ -54,8 +54,8 @@
             <i class="material-icons">more_vert</i>
           </button>
           <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right mdl-js-ripple-effect" for="more-button">
-              <a style="text-decoration: none" href="http://localhost/cpar/superior-manage-account.php"><li class="mdl-menu__item">Manage Accounts</li></a>
-            <a style="text-decoration: none" href="superior.php?logout"><li class="mdl-menu__item">Logout</li></a>
+              <a style="text-decoration: none" href="<?php echo HTTP_ROOT;?>superior-manage-account.php"><li class="mdl-menu__item">Manage Accounts</li></a>
+            <a style="text-decoration: none" href="<?php echo HTTP_ROOT;?>superior.php?logout"><li class="mdl-menu__item">Logout</li></a>
 <!--            <li disabled class="mdl-menu__item">4.3 Jelly Bean</li>-->
           </ul>
         </div>
@@ -83,11 +83,11 @@
                History
           </a>
           <div class="android-drawer-separator"></div>
-          <a class="mdl-navigation__link" href="">
+          <a class="mdl-navigation__link" href="<?php echo HTTP_ROOT;?>superior-manage-account.php">
                <i class="mdl-icon-toggle__label material-icons">account_circle</i>
                Manage Accounts
           </a>
-          <a class="mdl-navigation__link" href="superior.php?logout">
+          <a class="mdl-navigation__link" href="<?php echo HTTP_ROOT;?>superior.php?logout">
               <i class="mdl-icon-toggle__label material-icons">power_settings_new</i>
                Logout
           </a>
