@@ -1,6 +1,10 @@
 <!doctype html>
 <html lang="en">
-  <?php include_once('header.php'); ?>
+  <?php include_once('header.php');
+		require_once('config.php');
+		require_once('include/check_session.php');
+		require_once('include/employee_answer_issue_process.php');
+	?>
   <body>
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         
@@ -26,13 +30,21 @@
                <div class="mdl-grid portfolio-max-width portfolio-contact">
                 <div class="mdl-cell mdl-cell--10-col mdl-card mdl-shadow--4dp">
                     <div class="mdl-card__supporting-text">
-                            <form action="#" class="">
+                            <form action="employee-answer-cpar.php"  class="" enctype="multipart/form-data" method="POST">
                                  <div class="mdl-grid">
                                      
+									<div class="mdl-cell mdl-cell--4-col">
+									</div>
+									<div class="mdl-cell mdl-cell--4-col">
+										<?php require_once('include/employee_cpar_form_reminders.php'); ?>
+									</div>
+									<div class="mdl-cell mdl-cell--4-col">
+									</div>  
+									 
                                     <div class="mdl-cell mdl-cell--1-col"></div>
                                      <div class="mdl-cell mdl-cell--5-col">
                                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 100%">
-                                            <input class="mdl-textfield__input" pattern="[A-Z,a-z, ]*" type="text" id="Name">
+                                            <input name="cpar_no" class="mdl-textfield__input" pattern="[A-Z,a-z, ]*" type="text" id="Name" disabled="true">
                                             <label class="mdl-textfield__label" for="Name">CPAR No.</label>
                                             <span class="mdl-textfield__error">Letters and spaces only</span>
                                         </div>
@@ -40,7 +52,7 @@
                                      <div class="mdl-cell mdl-cell--1-col"></div>
                                      <div class="mdl-cell mdl-cell--5-col">
                                           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 100%">
-                                            <input class="mdl-textfield__input" pattern="[A-Z,a-z, ]*" type="text" id="Name">
+                                            <input name="cpar_date" class="mdl-textfield__input" pattern="[A-Z,a-z, ]*" type="text" id="Name" disabled="true">
                                             <label class="mdl-textfield__label" for="Name">CPAR Date</label>
                                             <span class="mdl-textfield__error">Letters and spaces only</span>
                                         </div>
@@ -51,7 +63,7 @@
                                      <div class="mdl-cell mdl-cell--1-col"></div>
                                      <div class="mdl-cell mdl-cell--11-col">
                                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 100%">
-                                            <textarea class="mdl-textfield__input" type="text" rows= "4" cols="15" id="sample5" ></textarea>
+                                            <textarea name="root_cause" class="mdl-textfield__input" type="text" rows= "4" cols="15" id="sample5" ></textarea>
                                             <label class="mdl-textfield__label" for="sample5">Root Cause</label>
                                           </div>
                                      </div>
@@ -59,7 +71,7 @@
                                      <div class="mdl-cell mdl-cell--1-col"></div>
                                      <div class="mdl-cell mdl-cell--11-col">
                                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 100%">
-                                            <textarea class="mdl-textfield__input" type="text" rows= "4" cols="15" id="sample5" ></textarea>
+                                            <textarea name="correction" class="mdl-textfield__input" type="text" rows= "4" cols="15" id="sample5" ></textarea>
                                             <label class="mdl-textfield__label" for="sample5">Correction</label>
                                           </div>
                                      </div>
@@ -67,7 +79,7 @@
                                      <div class="mdl-cell mdl-cell--1-col"></div>
                                      <div class="mdl-cell mdl-cell--11-col">
                                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 100%">
-                                            <textarea class="mdl-textfield__input" type="text" rows= "4" cols="15" id="sample5" ></textarea>
+                                            <textarea name="correction_action" class="mdl-textfield__input" type="text" rows= "4" cols="15" id="sample5" ></textarea>
                                             <label class="mdl-textfield__label" for="sample5">Corrective Action</label>
                                           </div>
                                      </div>
@@ -80,10 +92,10 @@
                                             <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" style="width: 100%" type="submit">
                                                 Submit
                                             </button>
--->
-                                            <button class="mdl-button mdl-button--raised mdl-button--colored mdl-js-button modal__close" style="width: 100%">
+-->											<input type="hidden" name="issue_to_answer" value="<?php echo $_GET['issue_id_to_answer'];?>">
+                                            <button class="mdl-button mdl-button--raised mdl-button--colored mdl-js-button modal__close" style="width: 100%" name="submit" type="submit">
                                               <i class="material-icons" style="float: left; margin-top: 4px; font-size: 30px">done</i>
-                                            Submit
+                                            Submit Answer
                                           </button>
                                             
                                         </p>

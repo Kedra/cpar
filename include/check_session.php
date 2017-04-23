@@ -11,13 +11,17 @@ if (isset($_SESSION['usr_accnt_typ_id'])) {
 	switch($_SESSION['usr_accnt_typ_id']) {
 		
 		case 1:
-			if($_SERVER['PHP_SELF'] == '/cpar/superior.php') {
+			if($_SERVER['PHP_SELF'] == '/cpar/superior.php' ||
+			$_SERVER['PHP_SELF'] == '/cpar/superior-validate-cpar.php' ||
+			$_SERVER['PHP_SELF'] == '/cpar/superior-reject-cpar.php') {
 				break;
 			}
 			header('location: superior.php');
 			exit();
 		case 2:
-			if($_SERVER['PHP_SELF'] == '/cpar/employee.php') {
+			if($_SERVER['PHP_SELF'] == '/cpar/employee.php' ||
+			$_SERVER['PHP_SELF'] == '/cpar/employee-answer-cpar.php' ||
+			$_SERVER['PHP_SELF'] == '/cpar/employee-respond-cpar.php') {
 				break;
 			}
 			header('location: employee.php');
@@ -43,6 +47,7 @@ if (isset($_GET['logout'])) {
     unset($_SESSION['acct_username']);
     unset($_SESSION['acct_password']);
     unset($_SESSION['acct_id']);
+	unset($_SESSION['usr_id']);
 	unset($_SESSION['usr_nm']);
 	unset($_SESSION['usr_dprtmnt']);
 	unset($_SESSION['usr_accnt_typ_id']);
@@ -67,9 +72,8 @@ if($sql = mysqli_query($con, 'SELECT * FROM ACCNT WHERE ACCNT_ID = ' . $id . ' A
         header('location: login.php');
         exit();
     }
-    mysqli_free_result($sql);
-    mysqli_close($con);
 }
+
 
 /* echo '<pre>';
 echo print_r($_SESSION);

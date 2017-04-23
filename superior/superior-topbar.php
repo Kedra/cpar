@@ -5,14 +5,7 @@
           </span>
           <!-- Add spacer, to align navigation to the right in desktop -->
           <div class="android-header-spacer mdl-layout-spacer"></div>
-          <div class="android-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
-            <label class="mdl-button mdl-js-button mdl-button--icon" for="search-field">
-              <i class="material-icons">search</i>
-            </label>
-            <div class="mdl-textfield__expandable-holder">
-              <input class="mdl-textfield__input" type="text" id="search-field">
-            </div>
-          </div>
+          
           <!-- Navigation -->
 <!--
           <div class="android-navigation-container">
@@ -31,7 +24,7 @@
                 <nav class="mdl-tabs__tab-bar">
                     <a class="mdl-tabs__tab is-active mdl-typography--text-uppercase" href="#demo"><b>Validate CPAR</b></a>
                     <a class="mdl-tabs__tab mdl-typography--text-uppercase" href="#issue-panel"><b>Issue CPAR</b></a>                
-                    <a class="mdl-tabs__tab mdl-typography--text-uppercase" href="#targaryens-panel"><span class="mdl-badge" data-badge="4"><b>Notification</b></span></a>
+                    <a class="mdl-tabs__tab mdl-typography--text-uppercase" href="#targaryens-panel"><span class="mdl-badge"><b>Notification</b></span></a>
                     <a class="mdl-tabs__tab mdl-typography--text-uppercase" href="#history-panel"><b>History</b></a>
                 </nav>
               </div>
@@ -62,7 +55,7 @@
           </button>
           <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right mdl-js-ripple-effect" for="more-button">
               <a style="text-decoration: none" href="http://localhost/cpar/superior-manage-account.php"><li class="mdl-menu__item">Manage Accounts</li></a>
-            <li class="mdl-menu__item">Logout</li>
+            <a style="text-decoration: none" href="superior.php?logout"><li class="mdl-menu__item">Logout</li></a>
 <!--            <li disabled class="mdl-menu__item">4.3 Jelly Bean</li>-->
           </ul>
         </div>

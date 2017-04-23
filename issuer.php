@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en">
   <?php
-		$tissue_name = '';
 		require_once('header.php');
 		require_once('config.php');
 		require_once('include/check_session.php');
@@ -21,7 +20,9 @@
            <a name="top"></a>
            <div class="page-content" style="background-color: #b3ccff">
           <br>
-          <?php require_once('issuer/issuer-issue.php'); ?>
+		  
+		  <?php require_once('issuer/issuer-issue.php'); ?>
+
           <?php require_once('issuer/issuer-notification.php'); ?>
           <?php require_once('issuer/issuer-history.php'); ?>
         </div>
@@ -46,5 +47,12 @@
     </script>
     
     <script src="assets/js/material.min.js"></script>
+	<script type="text/javascript">
+	function enableInputControls()
+	{            
+		$('#issuer_name').removeAttr('disabled');
+		$('#issuer_dprtmnt').removeAttr('disabled');
+	}
+	</script>
   </body>
 </html>

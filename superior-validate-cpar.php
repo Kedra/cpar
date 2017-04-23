@@ -1,15 +1,14 @@
 <!doctype html>
 <html lang="en">
-  <?php 
-		require_once('header.php');
+  <?php require_once('header.php');
 		require_once('config.php');
 		require_once('include/check_session.php');
-		require_once('include/employee_get_issue_data.php');
+		require_once('include/superior_get_issue_data.php');
   ?>
   <body>
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         
-      <?php include_once('employee/employee-manage-account-topbar.php'); ?>
+      <?php include_once('superior/superior-manage-account-topbar.php'); ?>
         
 
 <!--
@@ -31,7 +30,7 @@
                <div class="mdl-grid portfolio-max-width portfolio-contact">
                 <div class="mdl-cell mdl-cell--10-col mdl-card mdl-shadow--4dp">
                     <div class="mdl-card__supporting-text">
-                            <form action="employee-respond-cpar.php" class="" enctype="multipart/form-data" method="POST">
+                            <form action="superior-validate-cpar.php" class="" enctype="multipart/form-data" method="POST">
                                  <div class="mdl-grid">
                                      
                                     <div class="mdl-cell mdl-cell--1-col"></div>
@@ -126,21 +125,33 @@
                                           </div>
                                     </div>
                                      
-
-                                     <div class="mdl-cell mdl-cell--9-col"></div>
-                                     <div class="mdl-cell mdl-cell--3-col">
+									 <div class="mdl-cell mdl-cell--1-col"></div>
+                                     <div class="mdl-cell mdl-cell--5-col">
+										<p>
+<!--
+                                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" style="width: 100%" type="submit">
+                                                Submit
+                                            </button>
+-->
+                                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" style="width: 100%" name="reject" type="submit">
+                                            Reject
+                                                </button>
+                                            
+                                        </p>
+									 </div>
+									 <div class="mdl-cell mdl-cell--1-col"></div>
+                                     <div class="mdl-cell mdl-cell--5-col">
                                         <p>
 <!--
                                             <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" style="width: 100%" type="submit">
                                                 Submit
                                             </button>
--->											<input type="hidden" name="issue_to_answer" value="<?php echo $_GET['issue_id_to_answer'];?>">
-											<input type="hidden" name="issuer_superior" value="<?php echo $spr_array[0]["USR_NM"];?>">
-											<input type="hidden" name="concern_person_id" value="<?php echo $cncrn_array[0]["USR_ID"];?>">
-                                            <button class="mdl-button mdl-button--raised mdl-button--colored mdl-js-button modal__close" style="width: 100%" name="submit" type="submit">
-                                              <i class="material-icons" style="float: left; margin-top: 4px; font-size: 30px">swap_horiz</i>
-                                            Proceed
-                                            </button>
+-->												<input type="hidden" name="issue_to_validate" value="<?php echo $_GET['issue_id_to_validate'];?>">
+												<input type="hidden" name="issuer_superior" value="<?php echo $spr_array[0]["USR_NM"];?>">
+												<input type="hidden" name="concern_person_id" value="<?php echo $cncrn_array[0]["USR_ID"];?>">
+                                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" style="width: 100%" name="approve" type="submit">
+                                            Approve
+                                                </button>
                                             
                                         </p>
                                     </div>

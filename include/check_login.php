@@ -56,11 +56,13 @@ if(isset($_POST['username']) && isset($_POST['password'])) {
 			}
 			
 			while ($row = mysqli_fetch_array($sql, MYSQLI_ASSOC)) {
+				$usr_id = $row['USR_ID'];
 				$usr_nm = $row['USR_NM'];
 				$usr_dpt = $row['USR_DPRTMNT'];
 				$usr_accnt_typ_id = $row['USR_ACCNT_TYP_ID'];
 			}
 			
+			$_SESSION['usr_id'] = $usr_id;
 			$_SESSION['usr_nm'] = $usr_nm;
 			$_SESSION['usr_dprtmnt'] = $usr_dpt;
 			$_SESSION['usr_accnt_typ_id'] = $usr_accnt_typ_id;

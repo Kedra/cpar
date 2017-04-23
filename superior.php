@@ -1,8 +1,10 @@
 <!doctype html>
 <html lang="en">
-  <?php require_once('header.php');
+  <?php 
+		require_once('header.php');
 		require_once('config.php');
-		require_once('include/check_session.php');?>
+		require_once('include/check_session.php');
+		require_once('include/check_superior_form_process.php'); ?>
   <body>
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         
@@ -44,5 +46,12 @@
     </script>
     
     <script src="assets/js/material.min.js"></script>
+	<script type="text/javascript">
+	function enableInputControls()
+	{            
+		$('#issuer_name').removeAttr('disabled');
+		$('#issuer_dprtmnt').removeAttr('disabled');
+	}
+	</script>
   </body>
 </html>

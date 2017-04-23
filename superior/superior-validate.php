@@ -1,6 +1,6 @@
- <div class="mdl-tabs__panel is-active" id="demo">
+ <div class="mdl-tabs__panel is-active" id="demo" style="display:none">
 <!--              <h1>List of Issues</h1>-->
-              <h1>Issues As Of April 04, 2018</h1>
+              <h1>Issues As Of <?php echo date("F j, Y"); ?></h1>
 
        <div class="mdl-grid">
             <div class="mdl-cell mdl-cell--1-col"></div>
@@ -25,60 +25,7 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td data-title="Date">05/08/2017</td>
-                      <td data-title="Time">9:30 AM</td>
-                        <td data-title="Issuer">Alpha</td>
-                        <td data-title="Issuer">Golf</td>
-                        <td data-title="Issuer">Crewing</td>
-                        <td data-title="Status"><a href="" target="_blank">Validate</a></td>
-                        <td data-title="Disposition"></td>
-                    </tr>
-                       <tr>
-                          <td data-title="Date">04/07/2017</td>
-                          <td data-title="Time">9:30 AM</td>
-                            <td data-title="Issuer">Bravo</td>
-                            <td data-title="Issuer">Hotel</td>
-                            <td data-title="Issuer">HR</td>
-                            <td data-title="Status"><a href="" target="_blank">Validate</a></td>
-                            <td data-title="Disposition"></td>
-                        </tr>
-                       <tr>
-                          <td data-title="Date">03/06/2017</td>
-                          <td data-title="Time">10:30 AM</td>
-                            <td data-title="Issuer">Charlie</td>
-                            <td data-title="Issuer">India</td>
-                            <td data-title="Issuer">Purchasing</td>
-                            <td data-title="Status">Closed</td>
-                            <td data-title="Disposition">Denied</td>
-                        </tr>
-                      <tr>
-                          <td data-title="Date">02/05/2017</td>
-                          <td data-title="Time">11:30 AM</td>
-                            <td data-title="Issuer">Delta</td>
-                            <td data-title="Issuer">Juliet</td>
-                            <td data-title="Issuer">Maintenance</td>
-                            <td data-title="Status">Closed</td>
-                            <td data-title="Disposition">Approved</td>
-                        </tr>
-                      <tr>
-                          <td data-title="Date">01/04/2017</td>
-                          <td data-title="Time">12:30 PM</td>
-                            <td data-title="Issuer">Echo</td>
-                            <td data-title="Issuer">Kilo</td>
-                            <td data-title="Issuer">LAPD</td>
-                            <td data-title="Status">Closed</td>
-                            <td data-title="Disposition">Denied</td>
-                        </tr>
-                      <tr>
-                          <td data-title="Date">12/03/2017</td>
-                          <td data-title="Time">01:30 PM</td>
-                            <td data-title="Issuer">Foxtrot</td>
-                            <td data-title="Issuer">Lima</td>
-                            <td data-title="Issuer">RTD</td>
-                            <td data-title="Status">Closed</td>
-                            <td data-title="Disposition">Approved</td>
-                        </tr>
+					<?php require_once('include/superior_list_validate_history.php'); ?>	
                   </tbody>
                 </table>
               </div>

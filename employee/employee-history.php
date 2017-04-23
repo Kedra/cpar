@@ -23,7 +23,8 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
+					<?php require_once('include/employee_list_issue_history.php'); ?>
+                    <!--<tr>
                       <td data-title="Date">05/08/2017</td>
                       <td data-title="Time">9:30 AM</td>
                         <td data-title="Issuer">Alpha</td>
@@ -70,7 +71,7 @@
                             <td data-title="Issuer">Lima</td>
                             <td data-title="Issuer">RTD</td>
                             <td data-title="Disposition">Approved</td>
-                        </tr>
+                        </tr>-->
                   </tbody>
                 </table>
               </div>
