@@ -82,10 +82,6 @@
         });
         
     </script>
-<<<<<<< HEAD
-      
-=======
->>>>>>> 50a2ca1acfe1a0a436eab0c1ec4a6ffe074e9c86
     <script src="assets/js/material-modal.js"></script>
     <script src="assets/js/material.min.js"></script>
   </body>

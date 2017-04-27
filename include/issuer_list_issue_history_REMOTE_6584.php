@@ -8,14 +8,14 @@ if($sql = mysqli_query($con, $sql_stmt)) {
 			$apprvl_sts = $row['ISS_APPRVL_STS'];
 		} // date("m/d/y", strtotime($row['ISS_DT']))
 		echo '<tr>
-				<td data-title="Date">'.date("m/d/Y", strtotime($row['ISS_DT'])).'</td>
-				<td data-title="Time">'.date("g:i A", strtotime($row['ISS_TM'])).'</td>
-				<td data-title="Issuer">'.$_SESSION['usr_nm'].'</td>
-				<td data-title="Issue Name To">'.$row['USR_NM'].'</td>
-				<td data-title="Issue Department To">'.$row['USR_DPRTMNT'].'</td>
-				<td data-title="Disposition">'.$apprvl_sts.'</td>
+				<td>'.date("m/d/Y", strtotime($row['ISS_DT'])).'</td>
+				<td>'.date("g:i A", strtotime($row['ISS_TM'])).'</td>
+				<td>'.$_SESSION['usr_nm'].'</td>
+				<td>'.$row['USR_NM'].'</td>
+				<td>'.$row['USR_DPRTMNT'].'</td>
+				<td>'.$apprvl_sts.'</td>
 				<td>
-					<a href="'. HTTP_ROOT . 'superior-view-issue.php?issue_id_to_view='.$row['ISS_ID'].'">
+					<a href="'. HTTP_ROOT . 'issuer-view-issue.php?issue_id_to_view='.$row['ISS_ID'].'">
 						<button id="submit_button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" style="width: 100%">
 							View
 						</button>

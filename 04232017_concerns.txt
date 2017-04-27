@@ -2,7 +2,7 @@ changes as of 04/23/2017 for cpar project:
 
 1. change textbox, color must be darkened to be legible to read and type. (Choi) - done
 2. add manage accounts (Da)
-3. add isssue view in history (Da)
+3. add isssue view in history (Da) - done
 4. pending concern module (URGENT) (Da)
 5. change table header text to bold and add grid line color to all tables (Choi)
 6. all validate/respond/ clickable text to underlined, bold and blue. (Choi) - done

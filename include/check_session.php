@@ -15,7 +15,8 @@ if (isset($_SESSION['usr_accnt_typ_id'])) {
 			$_SERVER['PHP_SELF'] == '/cpar/superior-validate-cpar.php' ||
 			$_SERVER['PHP_SELF'] == '/cpar/superior-reject-cpar.php' ||
             $_SERVER['PHP_SELF'] == '/cpar/superior-manage-department.php' ||
-			$_SERVER['PHP_SELF'] == '/cpar/superior-manage-account.php') {
+			$_SERVER['PHP_SELF'] == '/cpar/superior-manage-account.php' ||
+			$_SERVER['PHP_SELF'] == '/cpar/superior-view-issue.php') {
 				break;
 			}
 			header('location: superior.php');
@@ -23,13 +24,15 @@ if (isset($_SESSION['usr_accnt_typ_id'])) {
 		case 2:
 			if($_SERVER['PHP_SELF'] == '/cpar/employee.php' ||
 			$_SERVER['PHP_SELF'] == '/cpar/employee-answer-cpar.php' ||
-			$_SERVER['PHP_SELF'] == '/cpar/employee-respond-cpar.php') {
+			$_SERVER['PHP_SELF'] == '/cpar/employee-respond-cpar.php' ||
+			$_SERVER['PHP_SELF'] == '/cpar/employee-view-issue.php') {
 				break;
 			}
 			header('location: employee.php');
 			exit();
 		case 3:
-			if($_SERVER['PHP_SELF'] == '/cpar/issuer.php') {
+			if($_SERVER['PHP_SELF'] == '/cpar/issuer.php' ||
+			$_SERVER['PHP_SELF'] == '/cpar/issuer-view-issue.php') {
 				break;
 			}
 			header('location: issuer.php');
