@@ -14,6 +14,13 @@ if($sql = mysqli_query($con, $sql_stmt)) {
 				<td data-title="Issue Name To">'.$row['USR_NM'].'</td>
 				<td data-title="Issue Department To">'.$row['USR_DPRTMNT'].'</td>
 				<td data-title="Disposition">'.$apprvl_sts.'</td>
+				<td>
+					<a href="'. HTTP_ROOT . 'superior-view-issue.php?issue_id_to_view='.$row['ISS_ID'].'">
+						<button id="submit_button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" style="width: 100%">
+							View
+						</button>
+					</a>
+				</td>
 			</tr>';
 	}
 }

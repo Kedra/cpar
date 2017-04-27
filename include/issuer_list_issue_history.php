@@ -15,11 +15,11 @@ if($sql = mysqli_query($con, $sql_stmt)) {
 				<td>'.$row['USR_DPRTMNT'].'</td>
 				<td>'.$apprvl_sts.'</td>
 				<td>
-				<a href="'. HTTP_ROOT . 'issuer-view-issue.php?'.$row['ISS_ID'].'">
-					<button id="submit_button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" style="width: 100%">
-						View
-                    </button>
-				</a>
+					<a href="'. HTTP_ROOT . 'issuer-view-issue.php?issue_id_to_view='.$row['ISS_ID'].'">
+						<button id="submit_button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" style="width: 100%">
+							View
+						</button>
+					</a>
 				</td>
 			</tr>';
 	}

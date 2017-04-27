@@ -14,6 +14,13 @@ if($sql = mysqli_query($con, $sql_stmt)) {
 				<td>'.$_SESSION['usr_nm'].'</td>
 				<td>'.$_SESSION['usr_dprtmnt'].'</td>
 				<td>'.$apprvl_sts.'</td>
+				<td>
+					<a href="'. HTTP_ROOT . 'employee-view-issue.php?issue_id_to_view='.$row['ISS_ID'].'">
+						<button id="submit_button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" style="width: 100%">
+							View
+						</button>
+					</a>
+				</td>
 			</tr>';
 	}
 }
