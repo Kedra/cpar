@@ -14,6 +14,7 @@ if (isset($_SESSION['usr_accnt_typ_id'])) {
 			if($_SERVER['PHP_SELF'] == '/cpar/superior.php' ||
 			$_SERVER['PHP_SELF'] == '/cpar/superior-validate-cpar.php' ||
 			$_SERVER['PHP_SELF'] == '/cpar/superior-reject-cpar.php' ||
+            $_SERVER['PHP_SELF'] == '/cpar/superior-manage-department.php' ||
 			$_SERVER['PHP_SELF'] == '/cpar/superior-manage-account.php') {
 				break;
 			}

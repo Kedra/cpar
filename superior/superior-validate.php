@@ -1,4 +1,4 @@
- <div class="mdl-tabs__panel is-active" id="demo" style="display:none">
+ <div class="mdl-tabs__panel is-active" id="demo">
 <!--              <h1>List of Issues</h1>-->
               <h1>Issues As Of <?php echo date("F j, Y"); ?></h1>
 

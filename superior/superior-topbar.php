@@ -20,11 +20,13 @@
         
         <div class="android-navigation-container">
              <div class="android-navigation mdl-navigation">
-              <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+              <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect" style="width: 96%">
                 <nav class="mdl-tabs__tab-bar">
                     <a class="mdl-tabs__tab is-active mdl-typography--text-uppercase" href="#demo"><b>Validate CPAR</b></a>
-                    <a class="mdl-tabs__tab mdl-typography--text-uppercase" href="#issue-panel"><b>Issue CPAR</b></a>                
-                    <a class="mdl-tabs__tab mdl-typography--text-uppercase" href="#targaryens-panel"><span class="mdl-badge"><b>Notification</b></span></a>
+                    <a class="mdl-tabs__tab mdl-typography--text-uppercase" href="#issue-panel"><b>Issue CPAR</b></a> 
+                    
+                    <a class="mdl-tabs__tab mdl-typography--text-uppercase" href="#targaryens-panel" onclick="update_notif(<?php echo $_SESSION['usr_id']; ?>)"><span class="mdl-badge" data-badge="<?php require_once('include/superior_notification.php');?>" id="notif"><b>Notification</b></span></a>
+                    
                     <a class="mdl-tabs__tab mdl-typography--text-uppercase" href="#history-panel"><b>History</b></a>
                 </nav>
               </div>
@@ -55,6 +57,7 @@
           </button>
           <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right mdl-js-ripple-effect" for="more-button">
               <a style="text-decoration: none" href="<?php echo HTTP_ROOT;?>superior-manage-account.php"><li class="mdl-menu__item">Manage Accounts</li></a>
+              <a style="text-decoration: none" href="<?php echo HTTP_ROOT;?>superior-manage-department.php"><li class="mdl-menu__item">Manage Departments</li></a>
             <a style="text-decoration: none" href="<?php echo HTTP_ROOT;?>superior.php?logout"><li class="mdl-menu__item">Logout</li></a>
 <!--            <li disabled class="mdl-menu__item">4.3 Jelly Bean</li>-->
           </ul>

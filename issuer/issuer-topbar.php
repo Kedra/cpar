@@ -18,11 +18,11 @@
 -->
         
         <div class="android-navigation-container">
-             <div class="android-navigation mdl-navigation" style="width: 415px;">
+             <div class="android-navigation mdl-navigation" style="width: 78%;">
               <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
                 <nav class="mdl-tabs__tab-bar">
                     <a class="mdl-tabs__tab is-active mdl-typography--text-uppercase" href="#demo"><b>Issue CPAR</b></a>    
-                    <a class="mdl-tabs__tab mdl-typography--text-uppercase" href="#targaryens-panel"><span class="mdl-badge" <!--data-badge="4"--><b>Notification</b></span></a>
+                    <a class="mdl-tabs__tab mdl-typography--text-uppercase" href="#targaryens-panel" onclick="update_notif(<?php echo $_SESSION['usr_id']; ?>)"><span class="mdl-badge" data-badge="<?php require_once('include/superior_notification.php');?>" id="notif"><b>Notification</b></span></a>
                     <a class="mdl-tabs__tab mdl-typography--text-uppercase" href="#history-panel"><b>History</b></a>
                 </nav>
               </div>

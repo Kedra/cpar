@@ -1,4 +1,4 @@
-  <div class="mdl-tabs__panel is-active" id="demo">
+  <div class="mdl-tabs__panel is-active" id="demo" style="display: none">
 <!--              <h1>List of Issues</h1>-->
               <h1>History</h1>
 
@@ -23,7 +23,7 @@
 					  <th>Issue Examine</th>
                     </tr>
                   </thead>
-                  <tbody>
+                  <tbody style="border: 2px solid;">
 					<?php require_once('include/issuer_list_issue_history.php');?>
                   </tbody>
                 </table>

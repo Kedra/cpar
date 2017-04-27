@@ -4,7 +4,7 @@ if($sql = mysqli_query($con, $sql_stmt)) {
 	while ($row = mysqli_fetch_array($sql, MYSQLI_ASSOC)) {
 		echo '<tr>
 				<td>'.date("m/d/Y", strtotime($row['NTFCTN_DT'])).'</td>
-				<td style="width: 10%;">'.date("g:i A", strtotime($row['NTFCTN_TM'])).'</td>
+				<td>'.date("g:i A", strtotime($row['NTFCTN_TM'])).'</td>
 				<td>'.$row['NTFCTN_DSC'].'</td>
 			</tr>';
 	}

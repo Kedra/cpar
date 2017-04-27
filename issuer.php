@@ -6,6 +6,7 @@
 		require_once('include/check_session.php');
 		require_once('include/check_issuer_form_process.php'); ?>
   <body>
+      
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         
 
@@ -53,6 +54,21 @@
 		$('#issuer_name').removeAttr('disabled');
 		$('#issuer_dprtmnt').removeAttr('disabled');
 	}
+        
+        function update_notif(id){
+    
+             $.ajax({
+              type: "POST",
+               url: "include/superior_notification_update.php",
+               data: {
+                   user_id: id
+               },
+               
+               success: function(data){
+                   $('#notif').removeAttr('data-badge');
+                } 
+           });
+        }
 	</script>
   </body>
 </html>

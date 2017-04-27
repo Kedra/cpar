@@ -25,23 +25,12 @@
     <link rel="stylesheet" href="assets/css/material-modal.min.css">
 <!--    <link rel="stylesheet" href="assets/css/material-modal.min.css">-->
     <link rel="stylesheet" href="assets/css/material-modal.css">
+    <link rel="stylesheet" href="assets/css/textbox.css">
     
     
     <script src="assets/js/getmdl-select.min.js"></script>
     <script src="assets/js/jquery.min.js"></script>
      
     <script src="assets/js/material.min.js"></script>
-    
-    <style>
-        #view-source {
-          position: fixed;
-          display: block;
-          right: 0;
-          bottom: 0;
-          margin-right: 40px;
-          margin-bottom: 40px;
-          z-index: 900;
-        }
-    </style>
     
   </head>

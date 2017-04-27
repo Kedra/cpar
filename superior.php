@@ -5,6 +5,18 @@
 		require_once('config.php');
 		require_once('include/check_session.php');
 		require_once('include/check_superior_form_process.php'); ?>
+    
+     <style>
+        #view-source {
+          position: fixed;
+          display: block;
+          right: 0;
+          bottom: 0;
+          margin-right: 40px;
+          margin-bottom: 40px;
+          z-index: 900;
+        }
+    </style>
   <body>
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         
@@ -30,6 +42,7 @@
     </div>
       
     <script type="text/javascript">
+        
       $(document).ready(function(){
             $(".mdl-tabs__tab-bar a").click(function () {
                 $('.mdl-tabs__panel').hide().eq($(this).index()).show();  // hide all divs and show the current div
@@ -47,11 +60,27 @@
     
     <script src="assets/js/material.min.js"></script>
 	<script type="text/javascript">
-	function enableInputControls()
-	{            
-		$('#issuer_name').removeAttr('disabled');
-		$('#issuer_dprtmnt').removeAttr('disabled');
-	}
+        function enableInputControls()
+        {            
+            $('#issuer_name').removeAttr('disabled');
+            $('#issuer_dprtmnt').removeAttr('disabled');
+        }
+        
+        function update_notif(id){
+    
+             $.ajax({
+              type: "POST",
+               url: "include/superior_notification_update.php",
+               data: {
+                   user_id: id
+               },
+               
+               success: function(data){
+                   $('#notif').removeAttr('data-badge');
+                } 
+           });
+        }
+        
 	</script>
   </body>
 </html>

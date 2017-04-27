@@ -41,6 +41,21 @@
             });
         });
         
+        function update_notif(id){
+    
+             $.ajax({
+              type: "POST",
+               url: "include/superior_notification_update.php",
+               data: {
+                   user_id: id
+               },
+               
+               success: function(data){
+                   $('#notif').removeAttr('data-badge');
+                } 
+           });
+        }
+        
     </script>
     
     <script src="assets/js/material.min.js"></script>
