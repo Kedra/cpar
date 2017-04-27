@@ -67,11 +67,11 @@
               <i class="mdl-icon-toggle__label material-icons">assignment_ind</i>
               Issue CPAR
           </a>
-          <a class="mdl-navigation__link" href="#targaryens-panel"> 
+          <a class="mdl-navigation__link" href="#targaryens"> 
               <i class="mdl-icon-toggle__label material-icons">notifications</i>
               Notification
           </a>
-          <a class="mdl-navigation__link" href="#history-panel">
+          <a class="mdl-navigation__link" href="#history">
                <i class="mdl-icon-toggle__label material-icons">history</i>
                History
           </a>

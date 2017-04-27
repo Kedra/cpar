@@ -31,6 +31,7 @@
                 <div class="mdl-cell mdl-cell--10-col mdl-card mdl-shadow--4dp">
                     <div class="mdl-card__supporting-text">
                             <form action="superior-reject-cpar.php" class="" enctype="multipart/form-data" method="POST">
+                                 <ul class="form-style-1">
                                  <div class="mdl-grid">
                                      
 									<div class="mdl-cell mdl-cell--4-col">
@@ -43,10 +44,14 @@
                                     
                                      <div class="mdl-cell mdl-cell--1-col"></div>
                                      <div class="mdl-cell mdl-cell--11-col">
+                                         <label>Description of Reason for Denial</label>
+                                        <textarea name="reason_for_denial_desc" id="field5" class="field-long field-textarea"></textarea>
+<!--
                                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 100%">
                                             <textarea name="reason_for_denial_desc" class="mdl-textfield__input" type="text" rows= "10" cols="15" id="sample5" ></textarea>
                                             <label class="mdl-textfield__label" for="sample5">Description of Reason of Denial</label>
                                           </div>
+-->
                                     </div>
                                      
 									 <div class="mdl-cell mdl-cell--9-col"></div>
@@ -59,6 +64,7 @@
 -->
 												<input type="hidden" name="issue_to_reject" value="<?php echo $_GET['issue_id_to_reject'];?>">
                                                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" style="width: 100%" name="submit" type="submit">
+                                                    <i class="material-icons" style="float: left; margin-top: 4px">done</i>
                                             Submit
                                                 </button>
                                             
@@ -69,6 +75,7 @@
                                      <br>
                                      <br>
                                 </div>
+                                </ul>
                             </form>
 
                     </div>

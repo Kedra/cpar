@@ -46,11 +46,11 @@
               <table id="table" class="table table-hover table-mc-light-blue">
                   <thead>
                     <tr>
-                      <th>Name</th>
-                      <th>Department</th>
-                      <th>Type</th>
-                      <th>Delete Action</th>
-                      <th>Edit Action</th>
+                      <th><b>Name</b></th>
+                      <th><b>Department</b></th>
+                      <th><b>Type</b></th>
+                      <th><b>Delete Action</b></th>
+                      <th><b>Edit Action</b></th>
                     </tr>
                   </thead>
                   <tbody> 

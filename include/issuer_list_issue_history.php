@@ -14,11 +14,11 @@ if($sql = mysqli_query($con, $sql_stmt)) {
 				<td>'.$row['USR_NM'].'</td>
 				<td>'.$row['USR_DPRTMNT'].'</td>
 				<td>'.$apprvl_sts.'</td>
-				<td>
+				<td style="text-align: center">
 				<a href="'. HTTP_ROOT . 'issuer-view-issue.php?'.$row['ISS_ID'].'">
-					<button id="submit_button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" style="width: 100%">
-						View
-                    </button>
+					<button class="android-more-button mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="more-button">
+                                              <i class="material-icons" style="color: gray;">today</i>
+                                          </button>
 				</a>
 				</td>
 			</tr>';

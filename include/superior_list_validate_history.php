@@ -22,7 +22,7 @@ if($sql = mysqli_query($con, $sql_stmt)) {
 		} else if ($row['ISS_APPRVL_STS'] == 'Denied') {
 			$sts = 'Validated';
 		} else {
-			$sts = '<a style="text-decoration: none" href="'.HTTP_ROOT.'superior-validate-cpar.php?issue_id_to_validate='.$row['ISS_ID'].'">Validate</a>';
+			$sts = '<a style="color: blue;" href="'.HTTP_ROOT.'superior-validate-cpar.php?issue_id_to_validate='.$row['ISS_ID'].'">Validate</a>';
 		}
 		echo '<tr>
 				<td data-title="Date">'.date("m/d/Y", strtotime($row['ISS_DT'])).'</td>

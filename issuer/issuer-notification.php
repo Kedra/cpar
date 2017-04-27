@@ -13,9 +13,9 @@
               <table id="table" class="table table-hover table-mc-light-blue">
                   <thead>
                     <tr>
-                      <th>Date</th>
-                      <th>Time</th>
-                      <th>Statement</th>
+                      <th><b>Date</b></th>
+                      <th><b>Time</b></th>
+                      <th><b>Statement</b></th>
                     </tr>
                   </thead>
                   <tbody>
