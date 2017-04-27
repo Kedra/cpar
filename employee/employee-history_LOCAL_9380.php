@@ -14,6 +14,14 @@
               <table id="table" class="table table-hover table-mc-light-blue">
                   <thead>
                     <tr>
+<<<<<<< HEAD
+                      <th><b>Date</b></th>
+                      <th><b>Time</b></th>
+                      <th><b>Issuer</b></th>
+                      <th><b>Issue To (Name)</b></th>
+                      <th><b>Issue To (Dep't)</b></th>
+                      <th><b>Disposition</b></th>
+=======
                       <th>Date</th>
                       <th>Time</th>
                       <th>Issuer</th>
@@ -21,6 +29,7 @@
                       <th>Issue To (Dep't)</th>
                       <th>Disposition</th>
 					  <th>Issue Examine</th>
+>>>>>>> f546fe64f2d890cc3a475d5644ce5733d41d21e7
                     </tr>
                   </thead>
                   <tbody>
