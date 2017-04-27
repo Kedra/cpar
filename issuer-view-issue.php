@@ -3,6 +3,7 @@
   <?php include_once('header.php'); 
 		require_once('config.php');
 		require_once('include/check_session.php');
+		require_once('include/view_issue_load_data.php');
 	?>
   <body>
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
