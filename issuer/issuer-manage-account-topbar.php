@@ -24,7 +24,7 @@
 -->
             
           <span class="android-mobile-title mdl-layout-title">
-            <img class="android-logo-image" src="assets/img/android-logo.png">
+            <img class="android-logo-image" src="assets/img/cpar-logo.png">
           </span>
           <a href="<?php echo HTTP_ROOT;?>issuer.php">
           <button class="android-more-button mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="more-button">

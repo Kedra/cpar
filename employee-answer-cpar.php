@@ -44,7 +44,7 @@
                                     <div class="mdl-cell mdl-cell--1-col"></div>
                                      <div class="mdl-cell mdl-cell--5-col">
                                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 100%">
-                                            <input name="cpar_no" class="mdl-textfield__input" pattern="[A-Z,a-z, ]*" type="text" id="Name" disabled="true">
+                                            <input name="cpar_no" class="mdl-textfield__input" pattern="[A-Z,a-z, ]*" type="text" id="cpar_no" disabled="true" value="<?php echo $cpar_no;?>">
                                             <label class="mdl-textfield__label" for="Name">CPAR No.</label>
                                             <span class="mdl-textfield__error">Letters and spaces only</span>
                                         </div>
@@ -52,7 +52,7 @@
                                      <div class="mdl-cell mdl-cell--1-col"></div>
                                      <div class="mdl-cell mdl-cell--5-col">
                                           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 100%">
-                                            <input name="cpar_date" class="mdl-textfield__input" pattern="[A-Z,a-z, ]*" type="text" id="Name" disabled="true">
+                                            <input name="cpar_date" class="mdl-textfield__input" pattern="[A-Z,a-z, ]*" type="text" id="cpar_date" disabled="true" value="<?php echo $cpar_date;?>">
                                             <label class="mdl-textfield__label" for="Name">CPAR Date</label>
                                             <span class="mdl-textfield__error">Letters and spaces only</span>
                                         </div>
@@ -121,17 +121,25 @@
     <script type="text/javascript">
       $(document).ready(function(){
             $(".mdl-tabs__tab-bar a").click(function () {
-                window.location.href = "http://localhost/cpar/superior-ui.php";  
+                window.location.href = "<?php echo HTTP_ROOT;?>superior.php";  
             });
         });
         
         $(document).ready(function(){
             $(".mdl-navigation a").click(function () {
-                window.location.href = "http://localhost/cpar/superior-ui.php"; 
+                window.location.href = "<?php echo HTTP_ROOT;?>superior-ui.php"; 
             });
         });
         
     </script>
+	
+	<script type="text/javascript">
+	function enableInputControls()
+	{            
+		$('#cpar_no').removeAttr('disabled');
+		$('#cpar_date').removeAttr('disabled');
+	}
+	</script>
     <script src="assets/js/material-modal.js"></script>
     <script src="assets/js/material.min.js"></script>
   </body>

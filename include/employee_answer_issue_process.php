@@ -2,7 +2,23 @@
 
 require_once('connect/connect.php');
 
+$cpar_no = '';
+$cpar_date = '';
+
+if($sql = mysqli_query($con, 'SELECT * FROM ISS WHERE ISS_ID='.$_GET['issue_id_to_answer'].' LIMIT 1')) {
+		if(!$row_cnt = mysqli_num_rows($sql)) {
+			header('location: employee.php');
+			exit();
+		}
+		while ($row = mysqli_fetch_array($sql, MYSQLI_ASSOC)) {
+			$date = date_create_from_format('Y-m-d', $row['ISS_DT_APPRVD']);
+			$date = date_format($date, 'd-m-Y');
+			$cpar_date = $date;
+		}
+}
+
 if(isset($_POST['submit'])) {
+	
 	if(empty($_POST['cpar_no'])) {
 		 $_SESSION['cpar_no_empty'] = '*CPAR No field is empty.';
 		 header('location: employee-answer-cpar.php?issue_id_to_answer='.$_POST['issue_to_answer']);
@@ -33,21 +49,64 @@ if(isset($_POST['submit'])) {
 		 header('location: employee-answer-cpar.php?issue_id_to_answer='.$_POST['issue_to_answer']);
 		 exit();
 	}
-	/*if($sql = mysqli_query($con, 'SELECT * FROM ISS WHERE ISS_ID = ' . $_POST['issue_to_reject'] . ' AND ISS_APPRVL_STS = "Approved" AND ISS_VLDT_STS = "VALIDATED" LIMIT 1')or die(mysqli_error($con))){
+	
+	
+	if($sql = mysqli_query($con, 'SELECT * FROM ISS WHERE ISS_ID = ' . $_POST['issue_to_answer'] . ' AND ISS_APPRVL_STS = "Denied" AND ISS_VLDT_STS = "" AND ISS_RSN_FR_DNL IS NOT NULL LIMIT 1')or die(mysqli_error($con))){
 		if($row_cnt = mysqli_num_rows($sql)) {
-			$_SESSION['issue_already_approved'] = "*Issue already been approved.";
-			header('location: superior-reject-cpar.php?issue_id_to_reject='.$_POST['issue_to_reject']);
+			$_SESSION['issue_already_rejected'] = "*Issue already been rejected.";
+			header('location: employee-answer-cpar.php?issue_id_to_answer='.$_POST['issue_to_answer']);
 			exit();
 		}
 	}
-	if($sql = mysqli_query($con, 'SELECT * FROM ISS WHERE ISS_ID = ' . $_POST['issue_to_reject'] . ' AND ISS_APPRVL_STS = "Denied" AND ISS_VLDT_STS = "" AND ISS_RSN_FR_DNL IS NOT NULL LIMIT 1')or die(mysqli_error($con))){
-		if($row_cnt = mysqli_num_rows($sql)) {
-			$_SESSION['issue_already_rejected'] = "*Issue already been rejected.";
-			header('location: superior-reject-cpar.php?issue_id_to_reject='.$_POST['issue_to_reject']);
+	$sql_stmt = 'SELECT *
+				 FROM ISS, ISS_CNCRN
+				 WHERE ISS.ISS_ID = ISS_CNCRN.ISS_CNCRN_ISS_ID
+				 AND ISS.ISS_ID = '.$_POST['issue_to_answer'].'
+				 AND ISS.ISS_APPRVL_STS = "Approved"
+				 AND ISS.ISS_VLDT_STS = "VALIDATED"
+				 AND ISS_CNCRN.ISS_CNCRN_APPRVL_STS = "Approved"
+				 AND ISS_CNCRN.ISS_CNCRN_VLDT_STS = "VALIDATED"
+				 LIMIT 1';
+	if($sql = mysqli_query($con, $sql_stmt)or die(mysqli_error($con))) {
+		if($row_cnt = mysqli_num_rows($sql)){
+			$_SESSION['issue_concern_already_approved'] = "*Issue concern already been approved.";
+			header('location: employee-answer-cpar.php?issue_id_to_answer='.$_POST['issue_to_answer']);
 			exit();
+		}
+	}
+	$sql_stmt = 'SELECT *
+				 FROM ISS, ISS_CNCRN
+				 WHERE ISS.ISS_ID = ISS_CNCRN.ISS_CNCRN_ISS_ID
+				 AND ISS.ISS_ID = '.$_POST['issue_to_answer'].'
+				 AND ISS.ISS_APPRVL_STS = "Approved"
+				 AND ISS.ISS_VLDT_STS = "VALIDATED"
+				 AND ISS_CNCRN.ISS_CNCRN_APPRVL_STS = "Denied"
+				 AND ISS_CNCRN.ISS_CNCRN_VLDT_STS = ""
+				 AND ISS_CNCRN_RSN_FR_DNL IS NOT NULL
+				 LIMIT 1';
+	if($sql = mysqli_query($con, $sql_stmt)or die(mysqli_error($con))) {
+		if($row_cnt = mysqli_num_rows($sql)){
+			$_SESSION['issue_concern_already_rejected'] = "*Issue concern already been rejected.";
+			header('location: employee-answer-cpar.php?issue_id_to_answer='.$_POST['issue_to_answer']);
+			exit();	
 		}
 	}
 	
+	$root_cause = test_input($con, $_POST['root_cause']);
+	$correction = test_input($con, $_POST['correction']);
+	$correction_action = test_input($con, $_POST['correction_action']);
+	
+	$sql_stmt = 'UPDATE ISS_CNCRN
+				SET ISS_CNCRN_NMBR = ' . $cpar_no . ' 
+					AND ISS_RT_CSE = ' . $root_cause . ' 
+					AND ISS_CRRCTN = '. $correction . ' 
+					AND ISS_CRRCTN_ACTN = ' . $correction_action . ' 
+					AND ISS_CNCRN_APPRVL_STS = ""
+					AND ISS_CNCRN_VLDT_STS = "VALIDATE"';
+	/* if($sql = mysqli_query($con, 'UPDATE ISS, ISS_CNCRN') */
+	
+	
+	/*
 	$reason_for_rejection_desc = test_input($con, $_POST['reason_for_denial_desc']);
 	
 	if($sql = mysqli_query($con, 'UPDATE ISS SET ISS_RSN_FR_DNL = "'.$reason_for_rejection_desc.'", ISS_APPRVL_STS = "Denied", ISS_VLDT_STS = "" WHERE ISS_ID = ' . $_POST['issue_to_reject'] .'')or die(mysqli_error($con))){
