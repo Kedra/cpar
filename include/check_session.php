@@ -16,7 +16,10 @@ if (isset($_SESSION['usr_accnt_typ_id'])) {
 			$_SERVER['PHP_SELF'] == '/cpar/superior-reject-cpar.php' ||
             $_SERVER['PHP_SELF'] == '/cpar/superior-manage-department.php' ||
 			$_SERVER['PHP_SELF'] == '/cpar/superior-manage-account.php' ||
-			$_SERVER['PHP_SELF'] == '/cpar/superior-view-issue.php') {
+			$_SERVER['PHP_SELF'] == '/cpar/superior-view-issue.php' ||
+			$_SERVER['PHP_SELF'] == '/cpar/superior-edit-account.php' ||
+			$_SERVER['PHP_SELF'] == '/cpar/superior-validate-answered-cpar.php' ||
+			$_SERVER['PHP_SELF'] == '/cpar/superior-validate-answered-cpar-view.php') {
 				break;
 			}
 			header('location: superior.php');
@@ -41,7 +44,15 @@ if (isset($_SESSION['usr_accnt_typ_id'])) {
 			if($_SERVER['PHP_SELF'] == '/cpar/superior.php') {
 				break;
 			}
-			header('location: superior.php');
+			header('location: superior.php' ||
+			$_SERVER['PHP_SELF'] == '/cpar/superior-validate-cpar.php' ||
+			$_SERVER['PHP_SELF'] == '/cpar/superior-reject-cpar.php' ||
+            $_SERVER['PHP_SELF'] == '/cpar/superior-manage-department.php' ||
+			$_SERVER['PHP_SELF'] == '/cpar/superior-manage-account.php' ||
+			$_SERVER['PHP_SELF'] == '/cpar/superior-view-issue.php' ||
+			$_SERVER['PHP_SELF'] == '/cpar/superior-edit-account.php' ||
+			$_SERVER['PHP_SELF'] == '/cpar/superior-validate-answered-cpar.php' ||
+			$_SERVER['PHP_SELF'] == '/cpar/superior-validate-answered-cpar-view.php');
 			exit();
 	}
 		

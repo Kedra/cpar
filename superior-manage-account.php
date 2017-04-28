@@ -3,6 +3,7 @@
   <?php include_once('header.php'); 
 		require_once('config.php');
 		require_once('include/check_session.php');
+		require_once('include/superior_delete_user_process.php');
 	?>
   <body>
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
@@ -22,9 +23,16 @@
            <div class="mdl-tabs__panel is-active" id="demo">
 <!--              <h1>List of Issues</h1>-->
               <h1>Manage Accounts</h1>
-
+			 <div class="mdl-grid">
+				<div class="mdl-cell mdl-cell--4-col"></div>
+				<div class="mdl-cell mdl-cell--4-col" style="text-align: center">
+					<?php require_once('include/superior_manage_accounts_reminders.php');?>
+				</div>
+				<div class="mdl-cell mdl-cell--4-col"></div>
+			 </div>
        <div class="mdl-grid">
 
+			  
             <div class="mdl-cell mdl-cell--1-col"></div>
             <div class="mdl-cell mdl-cell--11-col">    
                <div class="mdl-grid portfolio-max-width portfolio-contact" style="width: 100%">
@@ -38,7 +46,7 @@
               <?php include_once('add-user-modal.php'); ?>
                         <br>
                         <br>
-
+				
               <!-- Responsive table starts here -->
               <!-- For correct display on small screens you must add 'data-title' to each 'td' in your table -->
               <div class="table-responsive-vertical shadow-z-1">
@@ -71,17 +79,22 @@
     <script type="text/javascript">
       $(document).ready(function(){
             $(".mdl-tabs__tab-bar a").click(function () {
-                window.location.href = "http://localhost/cpar/superior-ui.php";  
+                window.location.href = "<?php echo HTTP_ROOT;?>superior.php";  
             });
         });
         
         $(document).ready(function(){
             $(".mdl-navigation a").click(function () {
-                window.location.href = "http://localhost/cpar/superior-ui.php"; 
+                window.location.href = "<?php echo HTTP_ROOT;?>superior.php"; 
             });
         });
         
     </script>
+	<script type="text/javascript">
+	function delete_user(e) {
+		if(!confirm('Are you sure you want to delete this user?'))e.preventDefault();
+	}
+	</script>
     <script src="assets/js/material-modal.js"></script>
     <script src="assets/js/material.min.js"></script>
   </body>

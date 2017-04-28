@@ -3,6 +3,12 @@
               <h1>Issues As Of <?php echo date("F j, Y"); ?></h1>
 
        <div class="mdl-grid">
+				<div class="mdl-cell mdl-cell--4-col"></div>
+				<div class="mdl-cell mdl-cell--4-col" style="text-align: center">
+					<?php require_once('include/employee_reminders.php');?>
+				</div>
+				<div class="mdl-cell mdl-cell--4-col"></div>
+
             <div class="mdl-cell mdl-cell--1-col"></div>
             <div class="mdl-cell mdl-cell--11-col">      
       <div class="mdl-grid portfolio-max-width portfolio-contact" style="width: 100%">
