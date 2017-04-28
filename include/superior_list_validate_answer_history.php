@@ -20,7 +20,7 @@ if($sql = mysqli_query($con, $sql_stmt)) {
 		}
 		if ($row['ISS_CNCRN_VLDT_STS'] == 'VALIDATED') {
 			$sts = 'Validated';
-		} else if ($row['ISS_CNCRN_APPRVL'] == 'Denied') {
+		} else if ($row['ISS_CNCRN_APPRVL_STS'] == 'Denied') {
 			$sts = 'Validated';
 		} else if(empty($row['ISS_CPR_NMBR'])) {
 			$sts = 'Pending';
