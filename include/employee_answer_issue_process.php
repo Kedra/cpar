@@ -146,7 +146,6 @@ $cpar_no = $cpar_no.'-'.$dprtmnt_code;
 if($sql = mysqli_query($con, 'SELECT ISS_CPR_NMBR FROM ISS_CNCRN WHERE ISS_CPR_NMBR LIKE "%'.$cpar_no.'%" ORDER BY ISS_CPR_NMBR DESC LIMIT 1')or die(mysqli_error($con))) {
 	if(!$row_cnt = mysqli_num_rows($sql)) {
 		$cpar_no = $cpar_no .'01';
-		end;
 	} else {
 		while($row = mysqli_fetch_array($sql, MYSQLI_ASSOC)) {
 			$cpar_prev_series_no = $row['ISS_CPR_NMBR'];

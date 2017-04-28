@@ -4,7 +4,6 @@
 		require_once('config.php');
 		require_once('include/check_session.php');
 		require_once('include/employee_answer_issue_process.php');
-		echo $_POST['cpar_no'];
 	?>
   <body>
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
