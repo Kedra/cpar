@@ -16,12 +16,7 @@ if($sql = mysqli_query($con, $sql_stmt)) {
                       <td data-title="Time">'.$row['USR_DPRTMNT'].'</td>
                         <td data-title="Issuer">'.$type.'</td>
                         <td data-title="Issuer" style="text-align: center">
-<<<<<<< HEAD
-                               <a href="'. HTTP_ROOT . 'superior-manage-account.php?delete_user=1&usr_id='.$row['USR_ID'].'&accnt_id='.$row['ACCNT_ID'].'" onclick="delete_user(event)">
-                                      <button class="android-more-button mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="more-button">
-=======
-                               <a href="" class="android-more-button mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect modal__trigger" data-modal="#delete" id="more-button">
->>>>>>> 75752cf6090082c96f80a04b54d8327c18165ef4
+                               <a href="'. HTTP_ROOT . 'superior-manage-account.php?delete_user=1&usr_id='.$row['USR_ID'].'&accnt_id='.$row['ACCNT_ID'].'" onclick="delete_user(event)" class="android-more-button mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect modal__trigger" data-modal="#delete" id="more-button">
                                           <i class="material-icons" style="color: gray;">delete</i>
                                 </a>
                            </td>

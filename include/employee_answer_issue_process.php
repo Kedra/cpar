@@ -270,38 +270,11 @@ if(isset($_POST['submit'])) {
 					
 	if($sql = mysqli_query($con, $sql_stmt)or die(mysqli_error($con))) {
 		
-		$_SESSION['issue_answer_successfully'] = '*ISSUE CPAR has answered been successfully!.';
+		$_SESSION['issue_answer_successfully'] = '*ISSUE CPAR has been answered successfully and sent for approval.';
 		header('location: employee.php');
 		exit();
 		
 	} 
-	/* if($sql = mysqli_query($con, 'UPDATE ISS, ISS_CNCRN') */
-	
-	
-	/*
-	$reason_for_rejection_desc = test_input($con, $_POST['reason_for_denial_desc']);
-	
-	if($sql = mysqli_query($con, 'UPDATE ISS SET ISS_RSN_FR_DNL = "'.$reason_for_rejection_desc.'", ISS_APPRVL_STS = "Denied", ISS_VLDT_STS = "" WHERE ISS_ID = ' . $_POST['issue_to_reject'] .'')or die(mysqli_error($con))){
-	}
-	
-	if($sql = mysqli_query($con, 'SELECT * FROM ISS, USR WHERE ISS_ID = ' . $_POST['issue_to_reject'] . ' AND ISS.ISS_USR_ISSR_ID=USR.USR_ID LIMIT 1')) {
-		while ($row = mysqli_fetch_array($sql, MYSQLI_ASSOC)) {
-			$issr_array[] = $row;
-		}
-	}
-	
-	$sql_stmt = 'INSERT INTO NTFCTN
-					(NTFCTN_DSC, NTFCTN_STS, NTFCTN_USR_ID, NTFCTN_DT, NTFCTN_TM)
-					VALUES ("Your CPAR issue has been rejected by Issuer Superior, '.$_SESSION['usr_nm'].', with the reason of rejection of: '.$reason_for_rejection_desc.'.", "Unread",
-					'.$issr_array[0]["USR_ID"].', CURDATE(), CURTIME())';
-	echo $sql_stmt;
-	if($sql = mysqli_query($con, $sql_stmt)) {
-		
-		$_SESSION['issue_sent_successfully'] = 'ISSUE CPAR has rejected been successfully.';
-		header('location: superior.php');
-		exit();
-		
-	} */
 }
 
 function test_input($con, $data) {

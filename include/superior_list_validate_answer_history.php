@@ -18,12 +18,13 @@ if($sql = mysqli_query($con, $sql_stmt)) {
 		} else {
 			$apprvl_sts = $row['ISS_CNCRN_APPRVL_STS'];
 		}
-		
-		if ($row['ISS_VLDT_STS'] == 'VALIDATED' && $row['ISS_CNCRN_VLDT_STS'] == 'VALIDATED') {
+		if ($row['ISS_CNCRN_VLDT_STS'] == 'VALIDATED') {
 			$sts = 'Validated';
-		} else if ($row['ISS_APPRVL_STS'] == 'Denied' && $row['ISS_CNCRN_APPRVL'] == 'Denied') {
+		} else if ($row['ISS_CNCRN_APPRVL'] == 'Denied') {
 			$sts = 'Validated';
-		} else {
+		} else if(empty($row['ISS_CPR_NMBR'])) {
+			$sts = 'Pending';
+		} else{
 			$sts = '<a style="color: blue;" href="'.HTTP_ROOT.'superior-validate-answered-cpar.php?issue_id_to_validate='.$row['ISS_ID'].'&issue_concern_id_to_validate='.$row['ISS_CNCRN_ID'].'">Validate</a>';
 		}
 		echo '<tr>

@@ -40,4 +40,9 @@ if(isset($_POST['approve'])) {
 		
 	}
 }
+
+if(isset($_POST['reject'])) {
+	header('location: superior-reject-answered-cpar.php?issue_concern_to_reject='.$_POST['issue_concern_to_validate']);
+	exit();
+}
 ?>
