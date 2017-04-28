@@ -31,11 +31,11 @@
                     <div class="mdl-card__supporting-text">
                         
                          <a href="" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored modal__trigger" data-modal="#modal" style="width: 15%">
-                <i class="material-icons" style="float: left; margin-top: 4px">perm_identity</i>
-                <span>Add User</span>
+                <i class="material-icons" style="float: left; margin-top: 4px">store</i>
+                <span>Add Department</span>
               </a>
                         
-              <?php include_once('add-user-modal.php'); ?>
+              <?php include_once('add-department-modal.php'); ?>
                         <br>
                         <br>
 
@@ -46,9 +46,9 @@
               <table id="table" class="table table-hover table-mc-light-blue">
                   <thead>
                     <tr>
-                      <th>Name</th>
-                      <th>Department</th>
+                      <th>Code</th>
                       <th>Type</th>
+                      <th>Principal/Department Name</th>
                       <th>Delete Action</th>
                       <th>Edit Action</th>
                     </tr>

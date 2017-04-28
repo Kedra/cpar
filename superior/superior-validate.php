@@ -35,6 +35,9 @@
 					<?php require_once('include/superior_list_validate_history.php'); ?>	
                   </tbody>
                 </table>
+                        </div>
+                    <br>
+                  <div class="table-responsive-vertical shadow-z-1">
 				<h2>Issues Answered sent by Employees to Approve</h2>
 				<table id="table" class="table table-hover table-mc-light-blue">
                   <thead>
