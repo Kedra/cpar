@@ -37,6 +37,7 @@
                         
               <?php include_once('add-user-modal.php'); ?>
               <?php include_once('delete-user-modal.php'); ?>
+              <?php include_once('edit-user-modal.php'); ?>
                         <br>
                         <br>
 

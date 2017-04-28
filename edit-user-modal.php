@@ -1,9 +1,9 @@
-<div id="modal" class="modal modal__bg">
+<div id="edit" class="modal modal__bg">
                 <div class="modal__dialog">
                   <div class="modal__content">
                     <div class="modal__header">
                       <div class="modal__title">
-                        <h2 class="modal__title-text">Add User</h2>
+                        <h2 class="modal__title-text">Edit User</h2>
                       </div>
 
                       <span class="mdl-button mdl-button--icon mdl-js-button material-icons modal__close">

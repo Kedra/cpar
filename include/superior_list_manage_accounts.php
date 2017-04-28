@@ -20,11 +20,10 @@ if($sql = mysqli_query($con, $sql_stmt)) {
                                           <i class="material-icons" style="color: gray;">delete</i>
                                 </a>
                            </td>
-                            <td data-title="Issuer" style="text-align: center"><a href="' . HTTP_ROOT . '">
-                                          <button class="android-more-button mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="more-button">
-                                              <i class="material-icons" style="color: gray;">mode_edit</i>
-                                          </button>
-                                    </a>
+                            <td data-title="Issuer" style="text-align: center">
+                                <a href="" class="android-more-button mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect modal__trigger" data-modal="#edit" id="more-button">
+                                          <i class="material-icons" style="color: gray;">mode_edit</i>
+                                </a>
                                </td>
                     </tr>';
 	}
