@@ -52,7 +52,7 @@ if(isset($_POST['approve'])) {
 	echo $sql_stmt;
 	if($sql = mysqli_query($con, $sql_stmt)) {
 		
-		$_SESSION['issue_sent_successfully'] = 'ISSUE CPAR has approved been successfully.';
+		$_SESSION['issue_concern_successfully'] = 'ISSUE CPAR has approved been successfully.';
 		header('location: superior.php');
 		exit();
 		
@@ -61,6 +61,11 @@ if(isset($_POST['approve'])) {
 
 if(isset($_POST['reject'])) {
 	header('location: superior-reject-cpar.php?issue_id_to_reject='.$_POST['issue_to_validate']);
+	exit();
+}
+
+if(isset($_POST['proceed'])) {
+	header('location: superior-validate-answered-cpar-view.php?issue_concern_to_validate='.$_POST['issue_concern_to_validate']);
 	exit();
 }
 

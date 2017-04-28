@@ -3,8 +3,7 @@
   <?php include_once('header.php');
 		require_once('config.php');
 		require_once('include/check_session.php');
-		require_once('include/employee_answer_issue_process.php');
-		echo $_POST['cpar_no'];
+		require_once('include/superior_get_issue_concern_data.php');
 	?>
   <body>
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
@@ -31,7 +30,7 @@
                <div class="mdl-grid portfolio-max-width portfolio-contact">
                 <div class="mdl-cell mdl-cell--10-col mdl-card mdl-shadow--4dp">
                     <div class="mdl-card__supporting-text">
-                            <form action="employee-answer-cpar.php?issue_id_to_answer=<?php echo $_GET['issue_id_to_answer'];?>"  onsubmit="return enableInputControls();" class="" enctype="multipart/form-data" method="POST">
+                            <form action="superior-validate-answered-cpar-view.php" class="" enctype="multipart/form-data" method="POST">
                                 <ul class="form-style-1">
                                  <div class="mdl-grid">
                                      
@@ -45,7 +44,7 @@
 									 
                                     <div class="mdl-cell mdl-cell--1-col"></div>
                                      <div class="mdl-cell mdl-cell--5-col">
-                                         <label>CPAR No.</label><input type="text" value="<?php echo $cpar_no;?>" name="cpar_no" id="cpar_no" class="field-divided" placeholder="CPAR No." disabled style="width: 100%; font-family: Lucida Sans Unicode" />
+                                         <label>CPAR No.</label><input type="text" value="<?php echo $iss_cncrn_array[0]['ISS_CPR_NMBR'];?>" name="cpar_no" id="cpar_no" class="field-divided" placeholder="CPAR No." disabled style="width: 100%; font-family: Lucida Sans Unicode" />
 <!--
                                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 100%">
                                             <input name="cpar_no" class="mdl-textfield__input" pattern="[A-Z,a-z, ]*" type="text" id="cpar_no" disabled="true" value="<?php echo $cpar_no;?>">
@@ -56,7 +55,7 @@
                                      </div>
                                      <div class="mdl-cell mdl-cell--1-col"></div>
                                      <div class="mdl-cell mdl-cell--5-col">
-                                         <label>CPAR Date</label><input type="text" value="<?php echo $cpar_date;?>" name="cpar_date" id="cpar_date" class="field-divided" placeholder="CPAR Date" disabled style="width: 100%; font-family: Lucida Sans Unicode" />
+                                         <label>CPAR Date</label><input type="text" value="<?php echo $iss_cncrn_array[0]['ISS_CPR_DT'];?>" name="cpar_date" id="cpar_date" class="field-divided" placeholder="CPAR Date" disabled style="width: 100%; font-family: Lucida Sans Unicode" />
 <!--
                                           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 100%">
                                             <input name="cpar_date" class="mdl-textfield__input" pattern="[A-Z,a-z, ]*" type="text" id="cpar_date" disabled="true" value="<?php echo $cpar_date;?>">
@@ -71,7 +70,7 @@
                                      <div class="mdl-cell mdl-cell--1-col"></div>
                                      <div class="mdl-cell mdl-cell--11-col">
                                           <label>Root Cause</label>
-                                        <textarea name="root_cause" id="field5" class="field-long field-textarea"></textarea>
+                                        <textarea name="root_cause" id="field5" class="field-long field-textarea" disabled><?php echo  $iss_cncrn_array[0]['ISS_RT_CSE'];?></textarea>
 <!--
                                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 100%">
                                             <textarea name="root_cause" class="mdl-textfield__input" type="text" rows= "4" cols="15" id="sample5" ></textarea>
@@ -83,7 +82,7 @@
                                      <div class="mdl-cell mdl-cell--1-col"></div>
                                      <div class="mdl-cell mdl-cell--11-col">
                                          <label>Correction</label>
-                                        <textarea name="correction" id="field5" class="field-long field-textarea"></textarea>
+                                        <textarea name="correction" id="field5" class="field-long field-textarea" disabled><?php echo $iss_cncrn_array[0]['ISS_CRRCTN'];?></textarea>
 <!--
                                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 100%">
                                             <textarea name="correction" class="mdl-textfield__input" type="text" rows= "4" cols="15" id="sample5" ></textarea>
@@ -95,7 +94,7 @@
                                      <div class="mdl-cell mdl-cell--1-col"></div>
                                      <div class="mdl-cell mdl-cell--11-col">
                                          <label>Corrective Action</label>
-                                        <textarea name="correction_action" id="field5" class="field-long field-textarea"></textarea>
+                                        <textarea name="correction_action" id="field5" class="field-long field-textarea" disabled><?php echo $iss_cncrn_array[0]['ISS_CRRCTN_ACTN'];?></textarea>
 <!--
                                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 100%">
                                             <textarea name="correction_action" class="mdl-textfield__input" type="text" rows= "4" cols="15" id="sample5" ></textarea>
@@ -105,18 +104,36 @@
                                      </div>
                                      
 
-                                     <div class="mdl-cell mdl-cell--9-col"></div>
-                                     <div class="mdl-cell mdl-cell--3-col">
+                                   <div class="mdl-cell mdl-cell--1-col"></div>
+                                     <div class="mdl-cell mdl-cell--5-col">
+										<p>
+<!--
+                                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" style="width: 100%" type="submit">
+                                                Submit
+                                            </button>
+-->
+                                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" style="width: 100%" name="reject" type="submit">
+                                                    <i class="material-icons" style="float: left; margin-top: 4px">clear</i>
+                                            Reject
+                                                </button>
+                                            
+                                        </p>
+									 </div>
+									 <div class="mdl-cell mdl-cell--1-col"></div>
+                                     <div class="mdl-cell mdl-cell--5-col">
                                         <p>
 <!--
                                             <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" style="width: 100%" type="submit">
                                                 Submit
                                             </button>
--->											<input type="hidden" name="issue_to_answer" value="<?php echo $_GET['issue_id_to_answer'];?>">
-                                            <button class="mdl-button mdl-button--raised mdl-button--colored mdl-js-button modal__close" style="width: 100%" name="submit" type="submit">
-                                              <i class="material-icons" style="float: left; margin-top: 4px; font-size: 30px">done</i>
-                                            Submit Answer
-                                          </button>
+-->												<input type="hidden" name="issue_to_validate" value="">
+												<input type="hidden" name="issue_concern_to_validate" value="<?php echo $_GET['issue_concern_to_validate'];?>">
+												<input type="hidden" name="issuer_superior" value="">
+												<input type="hidden" name="concern_person_id" value="">
+                                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" style="width: 100%" name="approve" type="submit">
+                                                    <i class="material-icons" style="float: left; margin-top: 4px">done</i>
+                                            Approve
+                                                </button>
                                             
                                         </p>
                                     </div>
