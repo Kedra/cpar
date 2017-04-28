@@ -16,10 +16,8 @@ if($sql = mysqli_query($con, $sql_stmt)) {
                       <td data-title="Time">'.$row['USR_DPRTMNT'].'</td>
                         <td data-title="Issuer">'.$type.'</td>
                         <td data-title="Issuer" style="text-align: center">
-                               <a href="'. HTTP_ROOT . '">
-                                      <button class="android-more-button mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="more-button">
+                               <a href="" class="android-more-button mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect modal__trigger" data-modal="#delete" id="more-button">
                                           <i class="material-icons" style="color: gray;">delete</i>
-                                      </button>
                                 </a>
                            </td>
                             <td data-title="Issuer" style="text-align: center"><a href="' . HTTP_ROOT . '">
