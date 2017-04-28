@@ -15,6 +15,11 @@ if(isset($_GET['issue_concern_to_validate'])) {
 	}
 }
 
+$cpar_date = $iss_cncrn_array[0]['ISS_CPR_DT'];
+$cpar_date = date('d-m-Y', strtotime($cpar_date));
+$completion_date = $iss_cncrn_array[0]['ISS_CNCRN_CMPLTN_DT'];
+$completion_date = date('d-m-Y', strtotime($completion_date));
+
 
 if(isset($_POST['approve'])) {
 	$iss_cncrn_to_approve = $_POST['issue_concern_to_validate'];

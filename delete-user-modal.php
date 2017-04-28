@@ -21,7 +21,7 @@
                           <i class="material-icons" style="float: left; margin-top: 4px">clear</i>
                         No
                       </a>
-                    <a href="" class="mdl-button mdl-button--raised mdl-button--colored mdl-js-button modal__close" style="width: 15%; float: right">
+                    <a class="mdl-button mdl-button--raised mdl-button--colored mdl-js-button modal__close" style="width: 15%; float: right">
                           <i class="material-icons" style="float: left; margin-top: 4px">done</i>
                         Yes
                       </a>

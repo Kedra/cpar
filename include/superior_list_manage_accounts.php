@@ -11,13 +11,13 @@ if($sql = mysqli_query($con, $sql_stmt)) {
 		} else {
 			$type = 'Administrator';
 		}
-		//<?php echo HTTP_ROOT.'superior-manage-account.php?delete_user=1&usr_id='.$row['USR_ID'].'&accnt_id='.$row['ACCNT_ID']?>
+		/*<?php echo HTTP_ROOT.'superior-manage-account.php?delete_user=1&usr_id='.$row['USR_ID'].'&accnt_id='.$row['ACCNT_ID']?>*/
 		echo '<tr>
                       <td data-title="Date">'.$row['USR_NM'].'</td>
                       <td data-title="Time">'.$row['USR_DPRTMNT'].'</td>
                         <td data-title="Issuer">'.$type.'</td>
                         <td data-title="Issuer" style="text-align: center">
-                               <a href="" class="android-more-button mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect modal__trigger" data-modal="#delete" id="more-button">
+                               <a href="asd" class="android-more-button mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect modal__trigger" data-modal="#delete" id="more-button">
                                           <i class="material-icons" style="color: gray;">delete</i>
                                 </a>
                            </td>

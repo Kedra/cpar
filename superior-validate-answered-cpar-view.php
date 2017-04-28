@@ -55,7 +55,7 @@
                                      </div>
                                      <div class="mdl-cell mdl-cell--1-col"></div>
                                      <div class="mdl-cell mdl-cell--5-col">
-                                         <label>CPAR Date</label><input type="text" value="<?php echo $iss_cncrn_array[0]['ISS_CPR_DT'];?>" name="cpar_date" id="cpar_date" class="field-divided" placeholder="CPAR Date" disabled style="width: 100%; font-family: Lucida Sans Unicode" />
+                                         <label>CPAR Date</label><input type="text" value="<?php echo $cpar_date;?>" name="cpar_date" id="cpar_date" class="field-divided" placeholder="CPAR Date" disabled style="width: 100%; font-family: Lucida Sans Unicode" />
 <!--
                                           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 100%">
                                             <input name="cpar_date" class="mdl-textfield__input" pattern="[A-Z,a-z, ]*" type="text" id="cpar_date" disabled="true" value="<?php echo $cpar_date;?>">
@@ -103,7 +103,14 @@
 -->
                                      </div>
                                      
+									<div class="mdl-cell mdl-cell--1-col"></div>
+									<div class="mdl-cell mdl-cell--5-col">
+										<label>Completion Date</label><input type="text" value="<?php echo $completion_date;?>" name="completion_date" class="field-divided" placeholder="." disabled style="width: 100%; font-family: Lucida Sans Unicode" />
+									</div>
 
+									<div class="mdl-cell mdl-cell--1-col"></div>
+									<div class="mdl-cell mdl-cell--5-col"></div>
+									 
                                    <div class="mdl-cell mdl-cell--1-col"></div>
                                      <div class="mdl-cell mdl-cell--5-col">
 										<p>

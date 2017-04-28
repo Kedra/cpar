@@ -58,7 +58,7 @@
 									
                                     <div class="mdl-cell mdl-cell--1-col"></div>
                                      <div class="mdl-cell mdl-cell--5-col">
-                                         <label>Issuer Name</label><input type="text" name="issuer_name" class="field-divided" placeholder="Issuer Name" value="<?php echo $_SESSION['usr_nm'];?>" style="width: 100%; font-family: Lucida Sans Unicode" />
+                                         <label>Issuer Name</label><input type="text" name="issuer_name" id="issuer_name" class="field-divided" placeholder="Issuer Name" disabled value="<?php echo $_SESSION['usr_nm'];?>" style="width: 100%; font-family: Lucida Sans Unicode" />
 <!--
                                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 100%: color: black">
                                             <input name="issuer_name" class="mdl-textfield__input" pattern="[A-Z,a-z, ]*" type="text" id="issuer_name" value="<?php //echo $_SESSION['usr_nm'];?>" disabled="true" style="color: #808080">
@@ -69,7 +69,7 @@
                                      </div>
                                      <div class="mdl-cell mdl-cell--1-col"></div>
                                      <div class="mdl-cell mdl-cell--5-col">
-                                          <label>Issuer Dep’t./Crewing Office</label><input type="text" name="issuer_dprtmnt" class="field-divided" placeholder="Issuer Dep’t./Crewing Office" value="<?php echo $_SESSION['usr_dprtmnt'];?>" style="width: 100%; font-family: Lucida Sans Unicode" />
+                                          <label>Issuer Dep’t./Crewing Office</label><input type="text" name="issuer_dprtmnt" id="issuer_dprtmnt" class="field-divided" disabled placeholder="Issuer Dep’t./Crewing Office" value="<?php echo $_SESSION['usr_dprtmnt'];?>" style="width: 100%; font-family: Lucida Sans Unicode" />
 <!--
                                           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 100%">
                                             <input name="issuer_dprtmnt" class="mdl-textfield__input" pattern="[A-Z,a-z, ]*" type="text" id="issuer_dprtmnt" value="<?php //echo $_SESSION['usr_dprtmnt'];?>" disabled="true">
