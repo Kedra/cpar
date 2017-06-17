@@ -38,10 +38,10 @@
                <div class="mdl-grid portfolio-max-width portfolio-contact" style="width: 100%">
                     <div class="mdl-card__supporting-text">
                         
-                         <a href="" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored modal__trigger" data-modal="#modal" style="width: 15%">
-                <i class="material-icons" style="float: left; margin-top: 4px">perm_identity</i>
-                <span>Add User</span>
-              </a>
+                <a href="<?php echo HTTP_ROOT;?>superior-new-user.php" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored modal__trigger" style="width: 15%">
+					<i class="material-icons" style="float: left; margin-top: 4px">perm_identity</i>
+					<span>Add User</span>
+				</a>
                         
               <?php include_once('add-user-modal.php'); ?>
               <?php include_once('delete-user-modal.php'); ?>
