@@ -57,7 +57,7 @@
           </button>
           <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right mdl-js-ripple-effect" for="more-button">
               <a style="text-decoration: none" href="<?php echo HTTP_ROOT;?>superior-manage-account.php"><li class="mdl-menu__item">Manage Accounts</li></a>
-              <a style="text-decoration: none" href="<?php echo HTTP_ROOT;?>superior-manage-department.php"><li class="mdl-menu__item">Manage Departments</li></a>
+              <!--<a style="text-decoration: none" href="<?php echo HTTP_ROOT;?>superior-manage-department.php"><li class="mdl-menu__item">Manage Departments</li></a> -->
             <a style="text-decoration: none" href="<?php echo HTTP_ROOT;?>superior.php?logout"><li class="mdl-menu__item">Logout</li></a>
 <!--            <li disabled class="mdl-menu__item">4.3 Jelly Bean</li>-->
           </ul>
