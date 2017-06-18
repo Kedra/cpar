@@ -59,6 +59,8 @@
                       <th><b>Name</b></th>
                       <th><b>Department</b></th>
                       <th><b>Type</b></th>
+                      <!--<th><b>Delete Action</b></th>
+                      <th><b>Edit Action</b></th> -->
                     </tr>
                   </thead>
                   <tbody> 
